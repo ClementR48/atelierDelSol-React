@@ -1,0 +1,42 @@
+.header {
+  
+  .nav {
+    background-color: rgba(255, 248, 236, 0.95);
+    height: 90px;
+    width: 100%;
+    position: relative;
+
+    .ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      position: fixed;
+      background-color: rgba(255, 248, 236, 0.95);
+      width: 100%;
+      z-index: 100;
+
+      li {
+        font-size: 22px;
+
+        .nav-active {
+          color: blue;
+          border-bottom: blue 1px solid;
+        }
+
+        a {
+          text-decoration: none;
+          color: red;
+
+          &:visited {
+            color: none;
+          }
+        }
+      }
+
+      img {
+        width: 90px;
+      }
+    }
+  }
+}
