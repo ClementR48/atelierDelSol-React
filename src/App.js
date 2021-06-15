@@ -9,14 +9,14 @@ import About from "./pages/About";
 function App() {
   return (
     <BrowserRouter>
-    <Switch>
-      <Route path="/" exact component={Home} />
-      <Route path="/tienda" exact component={Tienda} />
-      <Route path="/contact" exact component={Contact} />
-      <Route path="/à-propos" exact component={About} />
-      
-    </Switch>
-   </BrowserRouter>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/tienda" exact component={Tienda} />
+        <Route path="/contact" exact component={Contact} />
+        <Route path="/à-propos" exact component={About} />
+        
+      </Switch>
+    </BrowserRouter>
   );
 }
 

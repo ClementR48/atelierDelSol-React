@@ -1,0 +1,51 @@
+.categorie {
+ 
+  margin: 200px;
+
+  .ul{
+    display: flex;
+    justify-content: space-evenly;
+
+
+    .categ {
+      color: white;
+      font-size: 22px;
+      padding: 50px;
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: blue;
+        position: absolute;
+        z-index: -1;
+        top: 50%;  
+        left: 50%;
+        transform: translate(-50%, -50%)
+
+      }
+    }
+  
+    .selected {
+
+      &::before {
+        content: "";
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: yellow;
+        position: absolute;
+        z-index: -1;
+        top: 50%;  
+        left: 50%;
+        transform: translate(-50%, -50%)
+      }
+    }
+  }
+
+
+}
