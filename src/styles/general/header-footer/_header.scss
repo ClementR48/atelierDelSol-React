@@ -1,17 +1,31 @@
 .header {
+  height: 90px;
+  width: 100%;
+
   .nav {
     background-color: rgba(255, 248, 236, 0.95);
-    height: 90px;
-    width: 100%;
     position: relative;
-    position: fixed;
+
+    .nav-small {
+      width: 100%;
+      height: 100vh;
+      background-color: green;
+      z-index: 10000;
+      position: fixed;
+      display: none;
+    }
+
+    .hamburger {
+      display: none;
+    }
 
     .ul {
+      padding-left: 5%;
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-evenly;
-      width: 100%;
+      justify-content: space-between;
+      width: 70%;
       z-index: 100;
 
       li {
@@ -37,6 +51,11 @@
         a {
           text-decoration: none;
           color: $colorHeaderFont;
+          transition: color 0.2s;
+
+          &:hover {
+            color: $colorBlue;
+          }
 
           &:visited {
             color: none;
@@ -53,11 +72,61 @@
       position: absolute;
       top: 50%;
       right: 0;
-      margin-right: 10px;
+      margin-right: 5%;
       transform: translate(-50%, -50%);
+    }
+
+    .hamburger {
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    height: 50%;
+
+    .nav {
+      display: flex;
+
+      .nav-small {
+      }
+
+      .hamburger {
+      }
+
+      .ul {
+        li {
+          .nav-active {
+            &::before {
+            }
+          }
+
+          a {
+            display: none;
+
+            &:hover {
+            }
+
+            &:visited {
+            }
+          }
+        }
+
+        img {
+          width: 20%;
+        }
+      }
 
       .cart {
-        color: $colorBlue;
+        display: none;
+      }
+
+      div {
+      }
+
+      .hamburger {
+        display: block;
       }
     }
   }

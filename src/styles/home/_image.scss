@@ -1,0 +1,30 @@
+.image {
+  margin:1% 5%;
+  position: relative;
+
+  img{
+    width: 100%;
+    
+  }
+
+  p{
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 248, 236, 1);
+    top: 30%;
+    position: absolute;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .image{
+    img{
+
+    }
+
+    p{
+      font-size: 20px;
+    }
+  }
+}

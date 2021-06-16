@@ -1,11 +1,16 @@
 import React from 'react';
 import Header from '../components/header-footer/Header';
+import Image from '../components/home/Image';
+import HomeArticle from '../components/home/HomeArticle';
+import Footer from '../components/header-footer/Footer';
 
 const Home = () => {
   return (
-    <div>
+    <div className="home">
       <Header />
-      <h1>Home</h1>
+      <Image />
+      <HomeArticle />
+      <Footer />
     </div>
   );
 };
