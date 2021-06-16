@@ -7,7 +7,7 @@ import React from 'react';
 
 const HomeArticle = () => {
   return (
-    <div className="home-article">
+    <main className="home-article">
       <div className="article">
         <div className="informations">
           <h2 className="title">Parler avec la Terre</h2>
@@ -29,7 +29,7 @@ const HomeArticle = () => {
           <img src={picture2} alt="vase"></img>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

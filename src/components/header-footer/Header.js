@@ -18,7 +18,7 @@ const Header = () => {
           <li><NavLink exact to="/à-propos" activeClassName="nav-active">About</NavLink> </li>
         </ul>
         <div>
-          <NavLink exact to="/panier"><ShoppingCart className="cart" color='#9175FF' size={22} /></NavLink> 
+          <NavLink exact to="/panier"><ShoppingCart className="cart"  size={22} /></NavLink> 
         </div>   
 
         <ul className="nav-small">
@@ -28,7 +28,7 @@ const Header = () => {
           <li><NavLink exact to="/à-propos" activeClassName="nav-active">About</NavLink> </li>
         </ul> 
         <div className="hamburger">
-          <Menu size={22} color='#9175FF'/>
+          <Menu size={22} />
         </div>
       </nav> 
     </header>
