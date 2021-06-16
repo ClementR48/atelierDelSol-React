@@ -1,3 +1,10 @@
 body {
   font-family:  $mainFont;
+  font-size: $mainFontSize;
+}
+
+h2 {
+  font-size: $titleFontSize;
+  color: $colorBlue;
+  font-family: $titleFont;
 }

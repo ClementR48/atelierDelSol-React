@@ -1,0 +1,288 @@
+.home-article {
+  margin: 5% 5%;
+
+  /* =============article 1=============== */
+
+  .article {
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    margin: 20% 0;
+
+    .informations {
+      text-align: right;
+      width: 50%;
+      padding-right: 5%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      .title {
+      }
+
+      .text {
+        color: rgba(134, 90, 71, 1);
+        text-align: right;
+      }
+
+      a {
+        color: $colorBlue;
+      }
+    }
+
+    .picture {
+      width: 35%;
+
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  /* =============article 2=============== */
+
+  .article2 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    margin: 30% 0;
+
+    .informations {
+      text-align: left;
+      width: 50%;
+      padding-left: 5%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      .title {
+      }
+
+      .text {
+        color: rgba(134, 90, 71, 1);
+        text-align: left;
+      }
+
+      a {
+        color: $colorBlue;
+      }
+    }
+
+    .picture {
+      width: 35%;
+
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1220px) {
+  .home-article {
+    .article {
+      .informations {
+        width: 60%;
+
+        .title {
+        }
+
+        .text {
+        }
+
+        a {
+        }
+      }
+
+      .picture {
+        img {
+        }
+      }
+    }
+
+    .article2 {
+      .informations {
+        width: 60%;
+
+        .title {
+        }
+
+        .text {
+        }
+
+        a {
+        }
+      }
+
+      .picture {
+        img {
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1020px) {
+  .home-article {
+    .article {
+      .informations {
+        .title {
+          font-size: 3em;
+        }
+
+        .text {
+        }
+
+        a {
+        }
+      }
+
+      .picture {
+        img {
+        }
+      }
+    }
+
+    .article2 {
+      .informations {
+        .title {
+          font-size: 3em;
+        }
+
+        .text {
+        }
+
+        a {
+        }
+      }
+
+      .picture {
+        img {
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  .home-article {
+    .article {
+      .informations {
+        .title {
+          font-size: 2.5em;
+        }
+
+        .text {
+          font-size: 0.8em;
+        }
+
+        a {
+        }
+      }
+
+      .picture {
+        img {
+        }
+      }
+    }
+
+    .article2 {
+      .informations {
+        .title {
+          font-size: 2.5em;
+        }
+
+        .text {
+          font-size: 0.8em;
+        }
+
+        a {
+        }
+      }
+
+      .picture {
+        img {
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  .home-article {
+    margin: 15% 1%;
+
+    .article {
+      flex-direction: column-reverse;
+      align-items: center;
+
+      .informations {
+        width: 90%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        padding: 5%;
+
+        .title {
+          text-align: center;
+          padding: 5%;
+        }
+
+        .text {
+          text-align: center;
+          padding: 5%;
+        }
+
+        a {
+          text-align: center;
+          padding: 5%;
+        }
+      }
+
+      .picture {
+        width: 65%;
+
+        img {
+        }
+      }
+    }
+
+    .article2 {
+      flex-direction: column-reverse;
+      align-items: center;
+
+      .informations {
+        width: 90%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        padding: 5%;
+
+        .title {
+          text-align: center;
+          padding: 5%;
+        }
+
+        .text {
+          text-align: center;
+          padding: 5%;
+        }
+
+        a {
+          text-align: center;
+          padding: 5%;
+        }
+      }
+
+      .picture {
+        width: 65%;
+
+        img {
+        }
+      }
+    }
+  }
+}
