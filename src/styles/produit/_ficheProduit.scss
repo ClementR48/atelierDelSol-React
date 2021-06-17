@@ -1,0 +1,53 @@
+.fiche-produit {
+  margin: 5% 5%;
+  display: flex;
+
+  .images {
+    width: 45%;
+    img {
+      width: 100%;
+    }
+
+    .photo-mini {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      img {
+        width: 33%;
+      }
+    }
+  }
+  
+
+  .informations {
+    padding-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 35%;
+    padding-bottom: 15%;
+    h2 {
+      font-size: 4em;
+    }
+
+    .description {
+      color: $colorText;
+      
+    }
+
+    .dimensions {
+      color: $colorText;
+      
+    }
+
+    .prix {
+      color: $colorText;
+      font-size: 1.2em;
+    }
+
+    button {
+      color: $colorText;
+      font-size: 1.2em;
+    }
+  }
+}

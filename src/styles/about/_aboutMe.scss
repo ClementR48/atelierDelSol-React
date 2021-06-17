@@ -1,103 +1,79 @@
 .about-me {
-  margin: 5% 10%;
+  margin: 15% 10% 20%;
 
-    img {
-      width: 50%;
-      border-radius: 50%;
-      box-shadow: 55px 60px rgba(255, 239, 168, 0.72);
-      float: left;
-      shape-outside: circle();
-      margin-right: 100px;
-      margin-bottom: 100px;
-    }
-  
-    
-      h2 {
-        padding-top: 100px;
-        text-align-last: right;
-        padding-bottom: 50px;
-      }
+  img {
+    width: 40%;
+    border-radius: 50%;
+    box-shadow: 55px 60px rgba(255, 239, 168, 0.72);
+    float: left;
+    shape-outside: circle();
+    margin-right: 100px;
+    margin-bottom: 100px;
+  }
 
-      p {
-        
-      }
-    
+  h2 {
+    padding-top: 100px;
+    text-align-last: right;
+    padding-bottom: 50px;
+  }
 
+  p {
+    color: $colorText;
+    line-height: 1.5;
+  }
 }
 
 @media (max-width: 950px) {
   .about-me {
     margin: 5% 5%;
-  
-      img {
-        width: 400px;
 
-      }
-    
-      
-        h2 {
-          font-size: 2.9em;
-        }
-  
-        p {
-          
-        }
-      
-  
+    img {
+      width: 400px;
+    }
+
+    h2 {
+      font-size: 2.9em;
+    }
+
+    p {
+    }
   }
-  
 }
 
 @media (max-width: 768px) {
-  
-    .about-me {
-      margin: 5% 5%;
-    
-        img {
-          width: 50%;
-  
-        }
-      
-        
-          h2 {
-            font-size: 2.9em;
-          }
-    
-          p {
-            
-          }
-        
-    
+  .about-me {
+    margin: 5% 5%;
+
+    img {
+      width: 50%;
     }
-    
-  
+
+    h2 {
+      font-size: 2.9em;
+    }
+
+    p {
+    }
+  }
 }
 
 @media (max-width: 680px) {
+  .about-me {
+    margin: 5% 5%;
+    display: flex;
+    flex-direction: column;
 
-      .about-me {
-        margin: 5% 5%;
-        display: flex;
-        flex-direction: column;
-      
-          img {
-            width: 80%;
-            margin-bottom: 50px;
-    
-          }
-        
-          
-            h2 {
-              font-size: 2.9em;
-            }
-      
-            p {
-              
-            }
-          
-      
-      }
-      
-    
-  
+    img {
+      width: 60%;
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      font-size: 2.9em;
+    }
+
+    p {
+      text-align: right;
+    }
+  }
 }

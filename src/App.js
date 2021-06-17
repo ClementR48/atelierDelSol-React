@@ -4,6 +4,7 @@ import Tienda from "./pages/Tienda";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Cart from "./pages/Cart";
+import Produit from "./pages/Produit";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/contact" exact component={Contact} />
         <Route path="/à-propos" exact component={About} />
         <Route path="/panier" exact component={Cart} />
+        <Route path="/produit/" component={Produit} />
         
       </Switch>
     </BrowserRouter>
