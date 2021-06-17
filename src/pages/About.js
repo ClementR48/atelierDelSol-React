@@ -1,11 +1,14 @@
 import React from 'react';
+import AboutMe from '../components/about/AboutMe';
 import Header from '../components/header-footer/Header';
+import Footer from '../components/header-footer/Footer';
 
 const About = () => {
   return (
     <div className="about">
       <Header />
-      <h1>About</h1>
+      <AboutMe />
+      <Footer />
     </div>
   );
 };
