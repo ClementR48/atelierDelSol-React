@@ -1,4 +1,4 @@
-.categorie {
+/* .categorie {
  
   margin: 200px;
 
@@ -48,4 +48,122 @@
   }
 
 
+} */
+
+.categorie {
+  margin: 15% 5%;
+  width: 70%;
+
+  .ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    .categ {
+      color: $colorHeaderFont;
+      cursor: pointer;
+      background-color: $colorCategBg;
+      font-size: 1.3em;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     
+
+    }
+
+    .selected {
+      color: $colorCategBg;
+      cursor: pointer;
+      background-color:$colorHeaderFont;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+  }
+}
+}
+
+@media (max-width: 1000px) {
+  .categorie {
+    margin: 15% 1%;
+    width: 90%;
+  
+    .ul {
+
+  
+      .categ {
+        
+  
+        
+      }
+  
+      .selected {
+        
+      
+  
+        
+    }
+  }
+  }
+}
+
+@media (max-width: 700px) {
+  .categorie {
+    margin: 15% 1%;
+    width: 99%;
+  
+    .ul {
+      display: flex;
+      flex-wrap: wrap;
+  
+      .categ {
+        width: 100px;
+        height: 100px;
+        font-size: 1.1em;
+  
+       
+      }
+  
+      .selected {
+        font-size: 1.1em;
+      
+  
+        
+    }
+  }
+  }
+}
+
+@media (max-width: 440px) {
+  .categorie {
+    
+    
+  
+    .ul {
+
+  
+      .categ {
+        width: 80px;
+        height: 80px;
+        font-size: 0.9em;
+  
+       
+      }
+  
+      .selected {
+        font-size: 0.9em;
+      
+  
+        
+    }
+  }
+  }
 }

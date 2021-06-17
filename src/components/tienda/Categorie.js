@@ -5,10 +5,11 @@ const Categorie = () => {
   return (
     <div className="categorie">
       <ul className="ul">
-        <li className="categ">Vases</li>
-        <li className="categ">Tasses</li>
-        <li className="categ">Théière </li>
-        <li className="categ selected">All </li>
+        <li className="categ">vases</li>
+        <li className="categ">tasses</li>
+        <li className="categ">théière </li>
+        <li className="categ ">porte<br/>savons </li>
+        <li className="categ selected">tout </li>
       </ul>
       
     </div>

@@ -10,18 +10,7 @@ class Shop extends React.Component {
     }
   }
 
-  componentDidMount() {
-    fetch(
-      'https://restcountries.eu/rest/v2/all?fields=name;population;flag;region;capital',
-    )
-      .then((res) => res.json())
-      .then((data) =>
-        this.setState({
-          isLoaded: true,
-          items: data,
-        }),
-      )
-  }
+  
 
   render() {
     var { isLoaded, items } = this.state
