@@ -1,16 +1,321 @@
 .shop {
-  margin: 150px;
+  margin: 15% 8%;
   .galerie {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 70px;
     grid-auto-rows: minmax(10px, auto);
     margin: auto;
+    position: relative;
+    overflow: hidden;
 
-    .box {
-      position: relative;
+    .produit {
+      width: 100%;
       overflow: hidden;
-    }
+
+      img {
+        width: 100%;
+        transition: 1s;
+        position: relative;
+      }
+
+      &:hover img {
+        transform: scale(1.1);
+      }
+
+      /*     .caption {
+          position: absolute;
+          display: flex;
+          align-items: center;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(254, 131, 113, 0.5);
+          transform: scale(1.5);
+          opacity: 0;
+          transition: 0.5s;
     
+          .about {
+            width: 100%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+    
+            h2 {
+              color: blue;
+              text-transform: uppercase;
+              font-size: 25px;
+            }
+    
+            p {
+              color: white;
+              font-style: italic;
+            }
+          }
+        }
+    
+        &:hover .caption {
+          transform: scale(1);
+          opacity: 1;
+        } */
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .shop {
+    margin: 15% 2%;
+    .galerie {
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .produit {
+        width: 324px;
+        
+
+        img {
+
+        }
+
+        &:hover img {
+   
+        }
+
+        /*     .caption {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(254, 131, 113, 0.5);
+            transform: scale(1.5);
+            opacity: 0;
+            transition: 0.5s;
+      
+            .about {
+              width: 100%;
+              height: 80%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              align-items: center;
+              text-align: center;
+      
+              h2 {
+                color: blue;
+                text-transform: uppercase;
+                font-size: 25px;
+              }
+      
+              p {
+                color: white;
+                font-style: italic;
+              }
+            }
+          }
+      
+          &:hover .caption {
+            transform: scale(1);
+            opacity: 1;
+          } */
+      }
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  .shop {
+
+    .galerie {
+      gap: 26px;
+      
+
+      .produit {
+        
+        
+
+        img {
+
+        }
+
+        &:hover img {
+   
+        }
+
+        /*     .caption {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(254, 131, 113, 0.5);
+            transform: scale(1.5);
+            opacity: 0;
+            transition: 0.5s;
+      
+            .about {
+              width: 100%;
+              height: 80%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              align-items: center;
+              text-align: center;
+      
+              h2 {
+                color: blue;
+                text-transform: uppercase;
+                font-size: 25px;
+              }
+      
+              p {
+                color: white;
+                font-style: italic;
+              }
+            }
+          }
+      
+          &:hover .caption {
+            transform: scale(1);
+            opacity: 1;
+          } */
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .shop {
+    margin: 15% 2%;
+    .galerie {
+      gap: 10px;
+      
+
+      .produit {
+        width: 46%;
+        
+
+        img {
+
+        }
+
+        &:hover img {
+   
+        }
+
+        /*     .caption {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(254, 131, 113, 0.5);
+            transform: scale(1.5);
+            opacity: 0;
+            transition: 0.5s;
+      
+            .about {
+              width: 100%;
+              height: 80%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              align-items: center;
+              text-align: center;
+      
+              h2 {
+                color: blue;
+                text-transform: uppercase;
+                font-size: 25px;
+              }
+      
+              p {
+                color: white;
+                font-style: italic;
+              }
+            }
+          }
+      
+          &:hover .caption {
+            transform: scale(1);
+            opacity: 1;
+          } */
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .shop {
+    margin: 15% 5%;
+    .galerie {
+      
+      
+
+      .produit {
+        width: 250px;
+        
+
+        img {
+
+        }
+
+        &:hover img {
+   
+        }
+
+        /*     .caption {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(254, 131, 113, 0.5);
+            transform: scale(1.5);
+            opacity: 0;
+            transition: 0.5s;
+      
+            .about {
+              width: 100%;
+              height: 80%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              align-items: center;
+              text-align: center;
+      
+              h2 {
+                color: blue;
+                text-transform: uppercase;
+                font-size: 25px;
+              }
+      
+              p {
+                color: white;
+                font-style: italic;
+              }
+            }
+          }
+      
+          &:hover .caption {
+            transform: scale(1);
+            opacity: 1;
+          } */
+      }
+    }
   }
 }

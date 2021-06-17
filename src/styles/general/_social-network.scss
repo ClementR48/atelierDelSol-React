@@ -33,3 +33,87 @@
   }
   
 }
+
+@media (max-width: 1000px) {
+  .social-network {
+    padding-left: 25px;
+  
+    &:hover {
+      
+    }
+  
+    a {
+    
+  
+      svg {
+        width: 18px;
+  
+        &:hover {
+  
+          
+        }
+      }
+  
+      &hover {
+        
+      }
+    }
+    
+  }
+}
+
+@media (max-width: 1000px) {
+  .social-network {
+    padding-left: 25px;
+  
+    &:hover {
+      
+    }
+  
+    a {
+    
+  
+      svg {
+        width: 18px;
+  
+        &:hover {
+  
+          
+        }
+      }
+  
+      &hover {
+        
+      }
+    }
+    
+  }
+}
+
+@media (max-width: 600px) {
+  .social-network {
+    display: none;
+  
+    &:hover {
+      
+    }
+  
+    a {
+    
+  
+      svg {
+        width: 18px;
+  
+        &:hover {
+  
+          
+        }
+      }
+  
+      &hover {
+        
+      }
+    }
+    
+  }
+}

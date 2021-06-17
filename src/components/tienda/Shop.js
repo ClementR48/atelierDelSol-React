@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+/* import React, { Component } from 'react'
 import Produit from './Produit'
 
 class Shop extends React.Component {
@@ -33,4 +33,22 @@ class Shop extends React.Component {
   }
 }
 
-export default Shop
+export default Shop */
+
+import React from 'react';
+import Produit from './Produit';
+
+
+
+const Shop = () => {
+  return (
+    <div className="shop">
+      <div className="galerie">
+        <Produit />
+      </div>
+      
+    </div>
+  );
+};
+
+export default Shop;
