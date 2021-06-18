@@ -1,0 +1,354 @@
+.formulaire {
+  margin: 5% 5%;
+  display: flex;
+  
+
+  .left {
+    width: 50%;
+    
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    img {
+      width: 90px;
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    
+    
+
+    .hello {
+      background-color: rgba(220, 197, 255, 1);
+      height: 70%;
+      line-height: 0.6;
+
+      .just {
+        font-family: $mainFont;
+        font-size: 4em;
+        padding: 10% 0 0 15%;
+        color: $colorHeaderFont;
+
+      }
+
+      .say-hi {
+        font-family: $titleFont;
+        font-size: 5em;
+        padding-left: 30%;
+        color: $colorHeaderFont;
+
+      }
+    }
+
+    .contact {
+      background-color: rgba(255, 212, 189, 1);
+      height: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        padding-top: 15%;
+        color: $colorHeaderFont;
+
+        &:not(:last-child) {
+          padding-right: 20px;
+        }
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      
+    }
+  }
+
+  .right {
+    background-color: rgba(242, 255, 201, 1);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+
+    input {
+      border: none;
+      outline: none;
+      background-color: rgba(242, 255, 201, 1);
+      color: $colorHeaderFont;
+      padding-bottom: 1%;
+      margin-bottom: 5%;
+      border-bottom: 1px $colorHeaderFont solid;
+      font-size: $mainFontSize;
+      font-family: $mainFont;
+
+      &::placeholder {
+        color: $colorHeaderFont;
+      }
+    }
+
+    textarea {
+      border: none;
+      outline: none;
+      background-color: rgba(242, 255, 201, 1);
+      color: $colorHeaderFont;
+      padding-bottom: 25%;
+      margin-bottom: 15%;
+      border-bottom: 1px $colorHeaderFont solid;
+      font-size: $mainFontSize;
+      font-family: $mainFont;
+      resize: none;
+
+      &::placeholder {
+        color: $colorHeaderFont;
+      }
+
+    }
+
+    button {
+
+    }
+  }
+
+
+}
+
+@media (max-width: 1000px) {
+  .formulaire {
+
+    
+  
+    .left {
+
+  
+      img {
+        width: 70px;
+      }
+      
+      
+      
+  
+      .hello {
+
+  
+        .just {
+          font-size: 3em;
+          padding: 10% 0 0 10%;
+  
+        }
+  
+        .say-hi {
+          font-size: 4em;
+          padding-left: 20%;
+  
+        }
+      }
+  
+      .contact {
+     
+  
+        a {
+
+  
+          &:not(:last-child) {
+            
+          }
+          svg {
+  
+          }
+        }
+  
+        
+      }
+    }
+  
+    .right {
+
+  
+      input {
+ 
+  
+        &::placeholder {
+ 
+        }
+      }
+  
+      textarea {
+
+  
+        &::placeholder {
+         
+        }
+  
+      }
+  
+      button {
+  
+      }
+    }
+  
+  
+  }
+}
+
+@media (max-width: 755px) {
+  .formulaire {
+
+    
+  
+    .left {
+
+  
+      img {
+        
+      }
+      
+      
+      
+  
+      .hello {
+
+  
+        .just {
+          font-size: 2em;
+          padding: 10% 0 0 10%;
+  
+        }
+  
+        .say-hi {
+          font-size: 3em;
+          padding-left: 20%;
+  
+        }
+      }
+  
+      .contact {
+     
+  
+        a {
+
+  
+          &:not(:last-child) {
+            
+          }
+          svg {
+  
+          }
+        }
+  
+        
+      }
+    }
+  
+    .right {
+
+  
+      input {
+ 
+  
+        &::placeholder {
+ 
+        }
+      }
+  
+      textarea {
+
+  
+        &::placeholder {
+         
+        }
+  
+      }
+  
+      button {
+  
+      }
+    }
+  
+  
+  }
+}
+
+@media (max-width: 565px) {
+  .formulaire {
+    flex-direction: column;
+    
+  
+    .left {
+      width: 100%;
+  
+      img {
+        
+      }
+      
+      
+      
+  
+      .hello {
+        padding-bottom: 20%;
+  
+        .just {
+          font-size: 2em;
+          padding: 10% 0 0 20%;
+  
+        }
+  
+        .say-hi {
+          font-size: 3em;
+          padding-left: 30%;
+  
+        }
+      }
+  
+      .contact {
+     
+  
+        a {
+          padding-top: 10%;
+          padding-bottom: 5%;
+  
+          &:not(:last-child) {
+            
+          }
+          svg {
+
+          }
+        }
+  
+        
+      }
+    }
+  
+    .right {
+      box-sizing: border-box;
+      width: 100%;
+      
+  
+      input {
+ 
+  
+        &::placeholder {
+ 
+        }
+      }
+  
+      textarea {
+
+  
+        &::placeholder {
+         
+        }
+  
+      }
+  
+      button {
+  
+      }
+    }
+  
+  
+  }
+}
