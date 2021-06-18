@@ -6,7 +6,7 @@ import SocialNetwork from '../components/social_network/SocialNetwork';
 
 const Produit = () => {
   return (
-    <div className="produit">
+    <div className="produit-page">
       <Header />
       <FicheProduit />
       <SocialNetwork />
