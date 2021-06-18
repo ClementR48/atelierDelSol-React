@@ -13,7 +13,7 @@
     line-height: 2;
 
     li {
-      color: rgba(253, 129, 108, 1);
+      color: $colorFooterFont;
 
       span {
         text-decoration: underline;
@@ -25,20 +25,16 @@
 
 @media (max-width: 600px) {
   .footer {
-
-  
     img {
-      
     }
-  
+
     .listSocialNetwork {
       line-height: 1.5;
-  
+
       li {
         font-size: 0.8em;
-  
+
         span {
-          
         }
       }
     }
@@ -49,21 +45,20 @@
   .footer {
     display: flex;
     flex-direction: column;
-  
+
     img {
       width: 70px;
     }
-  
+
     .listSocialNetwork {
       line-height: 1.5;
       text-align: center;
       margin-top: 3%;
-  
+
       li {
         font-size: 0.8em;
-  
+
         span {
-          
         }
       }
     }

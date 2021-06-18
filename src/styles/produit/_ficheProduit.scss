@@ -17,7 +17,6 @@
       }
     }
   }
-  
 
   .informations {
     padding-left: 5%;
@@ -32,12 +31,10 @@
 
     .description {
       color: $colorText;
-      
     }
 
     .dimensions {
       color: $colorText;
-      
     }
 
     .prix {
@@ -54,50 +51,32 @@
 
 @media (max-width: 1090px) {
   .fiche-produit {
-
-  
     .images {
-
-
       img {
-
       }
-  
+
       .photo-mini {
-
-        
-
         img {
-        
         }
       }
     }
-    
-  
-    .informations {
 
+    .informations {
       width: 40%;
-      
 
       h2 {
-        
       }
-  
+
       .description {
-
-        
       }
-  
+
       .dimensions {
-      
       }
-  
-      .prix {
- 
-      }
-  
-      button {
 
+      .prix {
+      }
+
+      button {
       }
     }
   }
@@ -105,50 +84,33 @@
 
 @media (max-width: 960px) {
   .fiche-produit {
-    
-  
     .images {
-
-
       img {
-
       }
-  
+
       .photo-mini {
-
-        
-
         img {
-        
         }
       }
     }
-    
-  
-    .informations {
 
-     width: 50%;
-      
+    .informations {
+      width: 50%;
 
       h2 {
         font-size: 2em;
       }
-  
+
       .description {
-
-      
       }
-  
+
       .dimensions {
-        
       }
-  
-      .prix {
- 
-      }
-  
-      button {
 
+      .prix {
+      }
+
+      button {
       }
     }
   }
@@ -158,7 +120,7 @@
   .fiche-produit {
     flex-direction: column;
     margin: 5% 5%;
-  
+
     .images {
       display: flex;
       width: 100%;
@@ -166,7 +128,7 @@
       img {
         width: 70%;
       }
-  
+
       .photo-mini {
         margin-left: 2%;
         width: 25%;
@@ -178,44 +140,36 @@
         }
 
         img:not(:last-child) {
-          
           margin-bottom: 8%;
-         
         }
       }
     }
-    
-  
+
     .informations {
       width: 80%;
       padding: 0;
-     
-      
 
       h2 {
         font-size: 2em;
         padding-bottom: 2%;
       }
-  
-      .description {
 
+      .description {
         font-size: 1em;
         padding-bottom: 2%;
       }
-  
+
       .dimensions {
         font-size: 1em;
         padding-bottom: 2%;
       }
-  
+
       .prix {
- 
         padding-bottom: 2%;
       }
-  
+
       button {
         padding-bottom: 2%;
-
       }
     }
   }
@@ -224,7 +178,7 @@
 @media (max-width: 425px) {
   .fiche-produit {
     margin: 5% 2%;
-  
+
     .images {
       flex-direction: column;
       width: 100%;
@@ -232,7 +186,7 @@
       img {
         width: 100%;
       }
-  
+
       .photo-mini {
         margin-top: 1%;
         margin-left: 0;
@@ -243,49 +197,31 @@
         img {
           width: 33%;
           margin: 0;
-         
         }
-       
 
         img:not(:last-child) {
-          
           margin-bottom: 0;
-         
         }
       }
     }
-    
-  
+
     .informations {
-
-     
-      
-
       h2 {
-
       }
-  
+
       .description {
-
         font-size: 0.9em;
-        
       }
-  
+
       .dimensions {
         font-size: 0.9em;
-        
       }
-  
-      .prix {
- 
-       
-      }
-  
-      button {
-        
 
+      .prix {
+      }
+
+      button {
       }
     }
   }
-
 }

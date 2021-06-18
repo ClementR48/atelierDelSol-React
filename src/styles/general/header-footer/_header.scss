@@ -3,7 +3,7 @@
   width: 100%;
 
   .nav {
-    background-color: rgba(255, 248, 236, 0.8);
+    background-color: $colorNavBg;
     position: relative;
 
     .nav-small {
@@ -70,7 +70,6 @@
       }
     }
 
-
     div {
       position: absolute;
       top: 50%;
@@ -80,7 +79,6 @@
 
       .nav-active svg {
         color: $colorBlue;
-
       }
 
       .nav-active::before {
@@ -95,25 +93,16 @@
         transform: translate(50%, 50%);
       }
 
-     
-
       svg {
         color: $colorHeaderFont;
-        
 
         &:hover {
           color: $colorBlue;
         }
-
-        
       }
-
-      
     }
 
-
     .hamburger {
-
     }
   }
 }

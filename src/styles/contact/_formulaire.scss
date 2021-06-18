@@ -1,11 +1,10 @@
 .formulaire {
   margin: 5% 5%;
   display: flex;
-  
 
   .left {
     width: 50%;
-    
+
     display: flex;
     flex-direction: column;
     position: relative;
@@ -17,12 +16,9 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
-    
-    
-    
 
     .hello {
-      background-color: rgba(220, 197, 255, 1);
+      background-color: $colorCategBg;
       height: 70%;
       line-height: 0.6;
 
@@ -31,7 +27,6 @@
         font-size: 4em;
         padding: 10% 0 0 15%;
         color: $colorHeaderFont;
-
       }
 
       .say-hi {
@@ -39,7 +34,6 @@
         font-size: 5em;
         padding-left: 30%;
         color: $colorHeaderFont;
-
       }
     }
 
@@ -62,13 +56,11 @@
           height: 20px;
         }
       }
-
-      
     }
   }
 
   .right {
-    background-color: rgba(242, 255, 201, 1);
+    background-color: $colorForm;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -77,7 +69,7 @@
     input {
       border: none;
       outline: none;
-      background-color: rgba(242, 255, 201, 1);
+      background-color: $colorForm;
       color: $colorHeaderFont;
       padding-bottom: 1%;
       margin-bottom: 5%;
@@ -93,7 +85,7 @@
     textarea {
       border: none;
       outline: none;
-      background-color: rgba(242, 255, 201, 1);
+      background-color: $colorForm;
       color: $colorHeaderFont;
       padding-bottom: 25%;
       margin-bottom: 15%;
@@ -105,250 +97,157 @@
       &::placeholder {
         color: $colorHeaderFont;
       }
-
     }
 
     button {
-
     }
   }
-
-
 }
 
 @media (max-width: 1000px) {
   .formulaire {
-
-    
-  
     .left {
-
-  
       img {
         width: 70px;
       }
-      
-      
-      
-  
-      .hello {
 
-  
+      .hello {
         .just {
           font-size: 3em;
           padding: 10% 0 0 10%;
-  
         }
-  
+
         .say-hi {
           font-size: 4em;
           padding-left: 20%;
-  
         }
       }
-  
-      .contact {
-     
-  
-        a {
 
-  
+      .contact {
+        a {
           &:not(:last-child) {
-            
           }
           svg {
-  
           }
         }
-  
-        
       }
     }
-  
+
     .right {
-
-  
       input {
- 
-  
         &::placeholder {
- 
         }
       }
-  
-      textarea {
 
-  
+      textarea {
         &::placeholder {
-         
         }
-  
       }
-  
+
       button {
-  
       }
     }
-  
-  
   }
 }
 
 @media (max-width: 755px) {
   .formulaire {
-
-    
-  
     .left {
-
-  
       img {
-        
       }
-      
-      
-      
-  
-      .hello {
 
-  
+      .hello {
         .just {
           font-size: 2em;
           padding: 10% 0 0 10%;
-  
         }
-  
+
         .say-hi {
           font-size: 3em;
           padding-left: 20%;
-  
         }
       }
-  
-      .contact {
-     
-  
-        a {
 
-  
+      .contact {
+        a {
           &:not(:last-child) {
-            
           }
           svg {
-  
           }
         }
-  
-        
       }
     }
-  
+
     .right {
-
-  
       input {
- 
-  
         &::placeholder {
- 
         }
       }
-  
-      textarea {
 
-  
+      textarea {
         &::placeholder {
-         
         }
-  
       }
-  
+
       button {
-  
       }
     }
-  
-  
   }
 }
 
 @media (max-width: 565px) {
   .formulaire {
     flex-direction: column;
-    
-  
+
     .left {
       width: 100%;
-  
+
       img {
-        
       }
-      
-      
-      
-  
+
       .hello {
         padding-bottom: 20%;
-  
+
         .just {
           font-size: 2em;
           padding: 10% 0 0 20%;
-  
         }
-  
+
         .say-hi {
           font-size: 3em;
           padding-left: 30%;
-  
         }
       }
-  
+
       .contact {
-     
-  
         a {
           padding-top: 10%;
           padding-bottom: 5%;
-  
+
           &:not(:last-child) {
-            
           }
           svg {
-
           }
         }
-  
-        
       }
     }
-  
+
     .right {
       box-sizing: border-box;
       width: 100%;
-      
-  
-      input {
- 
-  
-        &::placeholder {
- 
-        }
-      }
-  
-      textarea {
 
-  
+      input {
         &::placeholder {
-         
         }
-  
       }
-  
+
+      textarea {
+        &::placeholder {
+        }
+      }
+
       button {
-  
       }
     }
-  
-  
   }
 }
