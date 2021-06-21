@@ -1,77 +1,70 @@
 .social-network {
   position: fixed;
-  width: 50px;
-  padding-left: 35px;
+  
   top: 40%;
   left: -20px;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s;
 
-  &:hover {
-    transform: scale(1.2) translateX(20px);
-  }
+  div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 35px;
+    transition: transform 0.2s;
+    width: 50px;
 
-  a {
-    margin-top: 40px;
-    transition: transform 0.5s;
-
-    svg {
-      fill: black;
-      stroke: white;
+    &:hover {
+      transform: scale(1.2) translateX(20px);
+    }
+    
+    a {
+      margin-top: 40px;
       transition: transform 0.5s;
+  
+      svg {
+        fill: black;
+        stroke: white;
+        transition: transform 0.5s;
+  
+        &:hover {
+          transform: rotate(1turn);
+        }
+      }
+  
+      &hover {
+      }
+    }
+  }
 
+
+}
+
+@media (max-width: 1000px) {
+  .social-network {
+    
+
+    div {
+      padding-left: 25px;
       &:hover {
-        transform: rotate(1turn);
       }
-    }
-
-    &hover {
-    }
-  }
-}
-
-@media (max-width: 1000px) {
-  .social-network {
-    padding-left: 25px;
-
-    &:hover {
-    }
-
-    a {
-      svg {
-        width: 18px;
-
-        &:hover {
+  
+      a {
+        svg {
+          width: 18px;
+  
+          &:hover {
+          }
+        }
+  
+        &hover {
         }
       }
-
-      &hover {
-      }
     }
-  }
+    }
+
+    
 }
 
-@media (max-width: 1000px) {
-  .social-network {
-    padding-left: 25px;
 
-    &:hover {
-    }
-
-    a {
-      svg {
-        width: 18px;
-
-        &:hover {
-        }
-      }
-
-      &hover {
-      }
-    }
-  }
-}
 
 @media (max-width: 600px) {
   .social-network {

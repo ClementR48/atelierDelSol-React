@@ -1,18 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../components/header-footer/Header';
 import Image from '../components/home/Image';
 import HomeArticle from '../components/home/HomeArticle';
 import Footer from '../components/header-footer/Footer';
 import SocialNetwork from '../components/social_network/SocialNetwork';
 
-const Home = () => {
+const Home = ({ color }) => {
+  const anim = true
+
   
+
   return (
     <div className="home">
-      <Header />
+      <Header anim={anim}/>
       <Image />
       <HomeArticle />
-      <Footer />
+      <Footer color={color} />
       <SocialNetwork />
     </div>
   );

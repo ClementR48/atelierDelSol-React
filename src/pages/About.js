@@ -3,12 +3,12 @@ import AboutMe from '../components/about/AboutMe';
 import Header from '../components/header-footer/Header';
 import Footer from '../components/header-footer/Footer';
 
-const About = () => {
+const About = ({ color }) => {
   return (
     <div className="about-page">
       <Header />
       <AboutMe />
-      <Footer />
+      <Footer color={color}/>
     </div>
   );
 };

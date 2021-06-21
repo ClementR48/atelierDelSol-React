@@ -2,9 +2,10 @@ import React from 'react';
 
 import logo from "../../images/logo2.png"
 
-const Footer = () => {
+const Footer = ({ color }) => {
+
   return (
-    <footer className="footer">
+    <footer style={{backgroundColor: color}} className="footer">
       <img src={logo} alt="logo"></img>
       <ul className="listSocialNetwork">
         <li><span>Email:</span> atelierDelSol@gmail.com</li>

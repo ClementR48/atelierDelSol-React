@@ -5,23 +5,26 @@ import { ShoppingCart, Menu } from 'react-feather';
 import gsap from 'gsap/gsap-core';
 
 
-const Header = () => {
+const Header = ({ anim }) => {
+
+  console.log(anim);
   const ul = useRef(null) ;
-  const Image = useRef(null) ;
+  const image = useRef(null) ;
   const cart = useRef(null) ;
 
   useEffect(() => {
-    console.log(ul);
-    gsap.from(ul.current, {x:500, duration: 1, opacity:0, })
-    gsap.from(Image.current, {x:-200 , duration:1, opacity:0, delay:1})
-    gsap.from(cart.current, {y:100 , duration:1, opacity:0, })
-  }, [ul])
-
+    if(anim === true){
+      gsap.from(ul.current, {x:500, duration: 1, opacity:0, })
+      gsap.from(image.current, {x:-200 , duration:1, opacity:0, delay:1})
+      gsap.from(cart.current, {y:100 , duration:1, opacity:0, })
+    }
+  })
+  
   return (
     <header className="header">
       <nav className="nav">
         <ul className='ul' ref={ul}> 
-          <li ref={Image}> <img src={logo} alt="logo"></img> </li>
+          <li ref={image}> <img src={logo} alt="logo"></img> </li>
           <li><NavLink exact to="/" activeClassName="nav-active">Acceuil</NavLink> </li>
           <li><NavLink exact to="/tienda" activeClassName="nav-active">Tienda</NavLink> </li>
           <li><NavLink exact to="/contact" activeClassName="nav-active">Contact</NavLink> </li>

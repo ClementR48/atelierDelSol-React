@@ -4,13 +4,13 @@ import Footer from '../components/header-footer/Footer';
 import Introduction from '../components/contact/Introduction';
 import Formulaire from '../components/contact/Formulaire';
 
-const Contact = () => {
+const Contact = ({ color }) => {
   return (
     <div className="contact-page">
       <Header />
       <Introduction />
       <Formulaire />
-      <Footer />
+      <Footer color={color} />
     </div>
   );
 };

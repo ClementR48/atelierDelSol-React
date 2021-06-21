@@ -12,10 +12,11 @@ const SocialNetwork = () => {
 
   return (
     <div className="social-network" ref={el}>
-      <a href="https://www.facebook.com/"><Facebook /></a>
-      <a href="https://mail.google.com/"><Mail /></a>
-      <a href="https://instagram.com/"><Instagram /></a>
- 
+      <div>
+        <a href="https://www.facebook.com/"><Facebook /></a>
+        <a href="https://mail.google.com/"><Mail /></a>
+        <a href="https://instagram.com/"><Instagram /></a>
+      </div>
     </div>
   );
 };
