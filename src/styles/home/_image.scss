@@ -6,13 +6,53 @@
     width: 100%;
   }
 
-  p {
-    width: 100%;
-    text-align: center;
-    color: $colorNavBg;
-    top: 30%;
+
+  .text {
+    width: 90%;
+    margin:0 5%;
+    display: flex;
     position: absolute;
-    font-size: 40px;
+    bottom: 20%;
+
+    li {
+      text-transform: uppercase;
+      list-style: none;
+      width: 100%; 
+      text-align: center;
+      color: $colorNavBg;
+      font-size: 70px;
+      opacity: 0;
+    }
+  }
+
+
+}
+@media (max-width: 1000px) {
+  .image {
+    
+    img {
+    }
+
+    .text {
+      li {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .image {
+    
+    img {
+    }
+
+    .text {
+      bottom: 5%;
+      li {
+        font-size: 30px;
+      }
+    }
   }
 }
 
@@ -22,8 +62,13 @@
     img {
     }
 
-    p {
-      font-size: 20px;
+    .text {
+      bottom: -20%;
+      li {
+        font-size: 20px;
+      }
     }
   }
 }
+
+
