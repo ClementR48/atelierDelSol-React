@@ -6,7 +6,9 @@ import Footer from '../components/header-footer/Footer';
 import SocialNetwork from '../components/social_network/SocialNetwork';
 
 const Home = ({ color }) => {
-  const anim = true
+  const  [ anim, setAnim ]  = useState(true);
+ 
+
 
   
 

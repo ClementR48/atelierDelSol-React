@@ -5,8 +5,7 @@ import { ShoppingCart, Menu } from 'react-feather';
 import gsap from 'gsap/gsap-core';
 
 
-const Header = ({ anim }) => {
-
+const Header = ({ anim, setAnim }) => {
   console.log(anim);
   const ul = useRef(null) ;
   const image = useRef(null) ;
@@ -17,7 +16,13 @@ const Header = ({ anim }) => {
       gsap.from(ul.current, {x:500, duration: 1, opacity:0, })
       gsap.from(image.current, {x:-200 , duration:1, opacity:0, delay:1})
       gsap.from(cart.current, {y:100 , duration:1, opacity:0, })
+
+
     }
+
+    
+
+
   })
   
   return (

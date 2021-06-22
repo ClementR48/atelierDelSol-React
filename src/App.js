@@ -12,12 +12,12 @@ function App() {
 
 
   const color = {
-    home: 'rgb(254,166,129)',
-    tienda: 'rgb(227,240,185)',
-    contact: 'rgb(255,239,168)',
-    about: 'rgb(255,212,189)',
+    home: 'rgba(254,166,129,0.7)',
+    tienda: 'rgba(227,240,185,0.7)',
+    contact: 'rgba(255,239,168,0.7)',
+    about: 'rgba(255,212,189,0.7)',
     cart: '',
-    produit: 'rgb(255,239,168)',
+    produit: 'rgba(255,239,168,0.7)',
   };
 
 
