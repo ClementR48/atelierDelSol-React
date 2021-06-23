@@ -36,15 +36,25 @@ class Shop extends React.Component {
 export default Shop */
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Produit from './Produit';
 
 
 
-const Shop = () => {
+const Shop = ({ listProduit, setListProduit , displayProduit }) => {
+  
   return (
     <div className="shop">
       <div className="galerie">
-        <Produit />
+        {listProduit.map((produit) => 
+
+          <Link key={produit.id} to={`/produit/${produit.id}`} onClick={() => {
+            
+          }}>
+            <Produit  produit={produit} setListProduit={setListProduit}/>
+          </Link>
+        )}
+        
       </div>
       
     </div>

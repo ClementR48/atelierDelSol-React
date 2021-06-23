@@ -7,60 +7,23 @@ import imageTest4 from '../../images/testImageShop4Bis.jpg'
 import imageTest5 from '../../images/testImageShop5Bis.jpg'
 
 
-const Produit = () => {
+const Produit = ({produit, setListProduit}) => {
+  
+
   return (
-    <>
     <div className="produit">
       <img src={imageTest1} alt="produit-vase"></img>
         <div className="caption">
         <div className="about">
-          <h2>Vase aux petits bras</h2>
-          <p> Vase</p>
-          <p> 39€</p>
+          <h2>{produit.titre}</h2>
+          <p onClick={() => {
+            setListProduit(produit.categorie)
+          }}> {produit.categorie}</p>
+          <p> {produit.prix}</p>
         </div> 
       </div> 
     </div>
-    <div className="produit">
-      <img src={imageTest2} alt="produit-vase"></img>
-      <div className="caption">
-        <div className="about">
-          <h2>Titre</h2>
-          <p> Categorie</p>
-          <p> Prix</p>
-        </div> 
-      </div> 
-    </div>
-    <div className="produit">
-      <img src={imageTest3} alt="produit-vase"></img>
-        <div className="caption">
-        <div className="about">
-          <h2>Titre</h2>
-          <p> Categorie</p>
-          <p> Prix</p>
-        </div> 
-      </div> 
-    </div>
-    <div className="produit">
-      <img src={imageTest4} alt="produit-vase"></img>
-        <div className="caption">
-        <div className="about">
-          <h2>Titre</h2>
-          <p> Categorie</p>
-          <p> Prix</p>
-        </div> 
-      </div> 
-    </div>
-    <div className="produit">
-      <img src={imageTest5} alt="produit-vase"></img>
-        <div className="caption">
-        <div className="about">
-          <h2>Titre</h2>
-          <p> Categorie</p>
-          <p> Prix</p>
-        </div> 
-      </div> 
-    </div>
-    </>
+    
   )
 }
 

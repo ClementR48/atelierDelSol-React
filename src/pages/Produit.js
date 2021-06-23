@@ -4,7 +4,7 @@ import Header from '../components/header-footer/Header';
 import FicheProduit from '../components/produit/ficheProduit';
 import SocialNetwork from '../components/social_network/SocialNetwork';
 
-const Produit = ({ color }) => {
+const Produit = ({ color, produit }) => {
   return (
     <div className="produit-page">
       <Header />

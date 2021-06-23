@@ -1,15 +1,26 @@
 import React from 'react';
 
-const Categorie = () => {
+
+const Categorie = ({ categories, selected, setSelected, setListProduit ,allProduits}) => {
+
+  console.log(selected[0].boolean);
+  const cssClass = 'categ'
+  
+ 
   
   return (
     <div className="categorie">
       <ul className="ul">
-        <li className="categ">vases</li>
-        <li className="categ">tasses</li>
-        <li className="categ">théière </li>
-        <li className="categ ">porte<br/>savons </li>
-        <li className="categ selected">tout </li>
+        {categories.map((categorie) => 
+          <li onClick={(event) => {
+            setListProduit(categorie)
+            event.target.className = 'categ selected'
+          }} key={categorie} value={categorie} className={cssClass}>{categorie}</li>
+        )}
+        
+        <li onClick={() => {
+          allProduits()
+        }} value="tout" className={cssClass} >tout </li>
       </ul>
       
     </div>

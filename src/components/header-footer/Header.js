@@ -6,7 +6,6 @@ import gsap from 'gsap/gsap-core';
 
 
 const Header = ({ anim, setAnim }) => {
-  console.log(anim);
   const ul = useRef(null) ;
   const image = useRef(null) ;
   const cart = useRef(null) ;
