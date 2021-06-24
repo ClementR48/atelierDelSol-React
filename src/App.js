@@ -7,12 +7,14 @@ import Cart from "./pages/Cart";
 import Produit from "./pages/Produit";
 import { useEffect, useState } from "react";
 import produits from "./utils/produits";
+import ScrollToTop from "./components/ScrollToTop";
 
 
 function App() {
-  const [ listProduit, setListProduit ] = useState(produits);
-  const [ selected, setSelected ] = useState();
+  const [ listProduit, setListProduit ] = useState([]);
   const [ oneProduit, setOneProduit] = useState([])
+  const [ anim ] = useState(true);
+  const [ selecProduits, setSelecProduits ] =useState([])
 
   const color = {
     home: 'rgba(254,166,129,0.7)',
@@ -23,37 +25,54 @@ function App() {
     produit: 'rgba(255,239,168,0.7)',
   };
 
+  const allCategories = produits.map((produit) => produit.categorie);
+  const categories = allCategories.filter((ele, pos) => allCategories.indexOf(ele) === pos)
+
+
+  const fetchProducts = async () => {
+    const products = await produits;
+    setListProduit(products)
+  }
+
+  
+  
+
+  const totalSelecProduits = () => {
+   const arrayProduits = [...selecProduits]
+   return arrayProduits
+  }
+  console.log(totalSelecProduits());
+
+
   const displayProduit = (id) => {
     const produit = produits.filter(produit => produit.id === id);
     setOneProduit(produit) 
   }
   
-  const allCategories = produits.map((produit) => produit.categorie);
-  const categories = allCategories.filter((ele, pos) => allCategories.indexOf(ele) === pos)
-  
- 
   const displayList = ((category) => {
     const produitsFilter = produits.filter(produits => produits.categorie === category);
     setListProduit(produitsFilter)
   });
+
   const allProduits = (() => {
     setListProduit(produits)
   })
 
-  
+  useEffect(() => {
+    fetchProducts()
+    
+  },[])
 
 
+ 
 
-
-
-
-  
 
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <Switch>
         <Route path="/" exact>
-          <Home color={color.home} />
+          <Home color={color.home} anim={anim} selecProduits={selecProduits} setSelecProduits={setSelecProduits} />
         </Route>
         <Route path="/tienda" exact >
           <Tienda color={color.tienda}
@@ -79,6 +98,7 @@ function App() {
         </Route>
         
       </Switch>
+      
     </BrowserRouter>
   );
 }

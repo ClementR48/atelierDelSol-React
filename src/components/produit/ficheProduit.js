@@ -8,9 +8,9 @@ const ficheProduit = ({ oneProduit }) => {
       <div className="images">
         <img src={image1} alt="illustration produit"></img>
         <div className="photo-mini">
-          <img src={image1}></img>
-          <img src={image1}></img>
-          <img src={image1}></img>
+          <img src=''></img>
+          <img src=''></img>
+          <img src=''></img>
         </div>
       </div>
       <div className='informations'>

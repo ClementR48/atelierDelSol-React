@@ -13,11 +13,12 @@ const Image = () => {
   const textImage = "La céramique inspirée"
 
   const textImageSplit = textImage.split("")
-  const timeLine = gsap.timeline({delay:0});
+  
   
 
 
-  useEffect(() => {
+   useEffect(() => {
+    const timeLine = gsap.timeline({delay:0});
     timeLine.from(Image.current, {y:400, duration: 1, opacity:0})
     
     gsap.to(els.current[0], {y:-100 , duration:0.6, delay: 1, opacity:1,ease:'power4' })
@@ -44,7 +45,7 @@ const Image = () => {
     
     
   
-  }) 
+  },[])  
 
   return (
     <div className="image" >

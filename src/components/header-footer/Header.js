@@ -5,25 +5,29 @@ import { ShoppingCart, Menu } from 'react-feather';
 import gsap from 'gsap/gsap-core';
 
 
-const Header = ({ anim, setAnim }) => {
+const Header = ({ anim }) => {
   const ul = useRef(null) ;
   const image = useRef(null) ;
   const cart = useRef(null) ;
 
-  useEffect(() => {
+
+  const gsapAnim = () => {
     if(anim === true){
       gsap.from(ul.current, {x:500, duration: 1, opacity:0, })
       gsap.from(image.current, {x:-200 , duration:1, opacity:0, delay:1})
       gsap.from(cart.current, {y:100 , duration:1, opacity:0, })
-
-
     }
 
+  }
+
+  useEffect(() => {
+    gsapAnim()
+
+  },[])
     
 
 
-  })
-  
+
   return (
     <header className="header">
       <nav className="nav">
