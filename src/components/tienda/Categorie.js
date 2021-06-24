@@ -1,9 +1,8 @@
 import React from 'react';
 
 
-const Categorie = ({ categories, selected, setSelected, setListProduit ,allProduits}) => {
+const Categorie = ({ categories, allProduits, displayList}) => {
 
-  console.log(selected[0].boolean);
   const cssClass = 'categ'
   
  
@@ -13,7 +12,7 @@ const Categorie = ({ categories, selected, setSelected, setListProduit ,allProdu
       <ul className="ul">
         {categories.map((categorie) => 
           <li onClick={(event) => {
-            setListProduit(categorie)
+            displayList(categorie)
             event.target.className = 'categ selected'
           }} key={categorie} value={categorie} className={cssClass}>{categorie}</li>
         )}

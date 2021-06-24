@@ -7,6 +7,11 @@ export default [
     description: 'vase modelé à la main avec la technique du colombin. Faïence blanche texturée Email transparent et turquoise',
     image: '../../images/testImageShop1Bis.jpg',
     categorie: 'vase',
+    dimensions: 
+    {
+      hauteur: '40',
+      largeur: '30'
+    },
     prix: 40,
     quantité: 1,
     epuise: false
@@ -17,6 +22,11 @@ export default [
     description: 'vase modelé à la main avec la technique du colombin. Faïence blanche texturée Email transparent et turquoise',
     image: '../images/aproposMarie.jpg',
     categorie: 'theiere',
+    dimensions: 
+    {
+      hauteur: '40',
+      largeur: '30'
+    },
     prix: 25,
     quantité: 1,
     epuise: false
@@ -27,6 +37,11 @@ export default [
     description: 'vase modelé à la main avec la technique du colombin. Faïence blanche texturée Email transparent et turquoise',
     image: '../images/aproposMarie.jpg',
     categorie: 'porte-savons',
+    dimensions: 
+    {
+      hauteur: '40',
+      largeur: '30'
+    },
     prix: 15,
     quantité: 1,
     epuise: false
@@ -37,6 +52,11 @@ export default [
     description: 'vase modelé à la main avec la technique du colombin. Faïence blanche texturée Email transparent et turquoise',
     image: '../../images/testImageShop1Bis.jpg',
     categorie: 'vase',
+    dimensions: 
+    {
+      hauteur: '40',
+      largeur: '30'
+    },
     prix: 40,
     quantité: 1,
     epuise: false

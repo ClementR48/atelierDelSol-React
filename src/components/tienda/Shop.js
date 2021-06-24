@@ -41,17 +41,15 @@ import Produit from './Produit';
 
 
 
-const Shop = ({ listProduit, setListProduit , displayProduit }) => {
+const Shop = ({ listProduit, setListProduit, displayProduit }) => {
   
   return (
     <div className="shop">
       <div className="galerie">
         {listProduit.map((produit) => 
 
-          <Link key={produit.id} to={`/produit/${produit.id}`} onClick={() => {
-            
-          }}>
-            <Produit  produit={produit} setListProduit={setListProduit}/>
+          <Link key={produit.id} to={`/produit/${produit.id}`} onClick={() => displayProduit(produit.id)}>
+            <Produit  produit={produit} setListProduit={setListProduit} displayProduit={displayProduit}/>
           </Link>
         )}
         

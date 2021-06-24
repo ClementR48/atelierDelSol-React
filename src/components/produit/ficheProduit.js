@@ -1,7 +1,8 @@
 import React from 'react';
 import image1 from "../../images/testImageShop1Bis.jpg"
 
-const ficheProduit = () => {
+const ficheProduit = ({ oneProduit }) => {
+  
   return (
     <main className="fiche-produit">
       <div className="images">
@@ -14,18 +15,16 @@ const ficheProduit = () => {
       </div>
       <div className='informations'>
         <h2>
-          Vase aux petits bras
+          {oneProduit.titre}
         </h2>
         <p className="description">
-          vase modelé à la main avec la technique du colombin. 
-          Faïence blanche texturée
-          Email transparent et turquoise
+        {oneProduit.description}
         </p>
         <div className="dimensions">
-          <p>hauteur: 25cm</p> 
-          <p>largeur: 48cm</p>
+          <p>hauteur: {oneProduit.dimensions.hauteur}cm</p> 
+          <p>largeur: {oneProduit.dimensions.largeur}cm</p>
         </div>
-        <p className="prix">48€</p>
+        <p className="prix">{oneProduit.prix}€</p>
         <button>Ajouter au panier </button>
       </div>
 

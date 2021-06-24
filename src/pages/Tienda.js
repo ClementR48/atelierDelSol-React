@@ -4,47 +4,25 @@ import Footer from '../components/header-footer/Footer';
 import Header from '../components/header-footer/Header';
 import Shop from '../components/tienda/Shop';
 import SocialNetwork from '../components/social_network/SocialNetwork';
-import produits from '../utils/produits';
-
-import { useEffect, useState } from 'react';
-
-const Tienda = ({ color, displayProduit }) => {
 
 
-  const [ listProduit, setListProduit ] = useState([]);
-  const [ selected, setSelected ] = useState([{ boolean: true, element: 'tout'}]);
 
-  const allCategories = produits.map((produit) => produit.categorie);
-  const categories = allCategories.filter((ele, pos) => allCategories.indexOf(ele) === pos)
-  
- 
-  const displayList = ((category) => {
-    const produitsFilter = produits.filter(produits => produits.categorie === category);
-    setListProduit(produitsFilter)
-  });
-  const allProduits = (() => {
-    setListProduit(produits)
-  })
-  
-  useEffect(() => {
-    setListProduit(produits)
-  },[])
+const Tienda = ({ color, listProduit, displayList, categories, allProduits ,displayProduit }) => {
 
-
- 
 
   return (
     <div className="tienda">
       <Header />
       <Categorie
         categories={categories}
-        selected={selected}
-        setSelected={setSelected}
-        setListProduit={displayList}
         allProduits={allProduits}
+        displayList={displayList}
+        
+        
+        
       />
 
-     <Shop listProduit={listProduit} setListProduit={displayList}  />
+      <Shop listProduit={listProduit} setListProduit={displayList} displayProduit={displayProduit}  />
       <Footer color={color}/>
       <SocialNetwork />
     </div>
