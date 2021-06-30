@@ -1,5 +1,5 @@
 import Home from "./pages/Home";
-import{ BrowserRouter,Switch, Route } from "react-router-dom";
+import{ BrowserRouter,Switch, Route, useParams } from "react-router-dom";
 import Tienda from "./pages/Tienda";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
@@ -25,6 +25,8 @@ function App() {
     produit: 'rgba(255,239,168,0.7)',
   };
 
+  
+
   const allCategories = produits.map((produit) => produit.categorie);
   const categories = allCategories.filter((ele, pos) => allCategories.indexOf(ele) === pos)
 
@@ -35,19 +37,23 @@ function App() {
   }
 
   
+
+  
   
 
   const totalSelecProduits = () => {
    const arrayProduits = [...selecProduits]
    return arrayProduits
   }
-  console.log(totalSelecProduits());
+  
 
 
   const displayProduit = (id) => {
-    const produit = produits.filter(produit => produit.id === id);
+     
+    const produit = produits.find(produit => produit.id === id);
     setOneProduit(produit) 
   }
+
   
   const displayList = ((category) => {
     const produitsFilter = produits.filter(produits => produits.categorie === category);
@@ -60,8 +66,9 @@ function App() {
 
   useEffect(() => {
     fetchProducts()
-    
   },[])
+
+  
 
 
  
@@ -93,8 +100,8 @@ function App() {
         <Route path="/panier" exact  >
           <Cart color={color.tienda}/>
         </Route>
-        <Route path={`/produit/`} >
-          <Produit color={color.produit}  oneProduit={oneProduit[0]} />
+        <Route path="/produit/:id" >
+          <Produit color={color.produit} produits={produits} />
         </Route>
         
       </Switch>

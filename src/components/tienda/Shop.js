@@ -48,7 +48,7 @@ const Shop = ({ listProduit, setListProduit, displayProduit }) => {
       <div className="galerie">
         {listProduit.map((produit) => 
 
-          <Link key={produit.id} to={`/produit/${produit.id}`} onClick={() => displayProduit(produit.id)}>
+          <Link key={produit.id} to={`/produit/${produit.id}`}>
             <Produit  produit={produit} setListProduit={setListProduit} displayProduit={displayProduit}/>
           </Link>
         )}

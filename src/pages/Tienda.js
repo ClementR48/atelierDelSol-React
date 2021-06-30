@@ -17,9 +17,7 @@ const Tienda = ({ color, listProduit, displayList, categories, allProduits ,disp
         categories={categories}
         allProduits={allProduits}
         displayList={displayList}
-        
-        
-        
+       
       />
 
       <Shop listProduit={listProduit} setListProduit={displayList} displayProduit={displayProduit}  />
