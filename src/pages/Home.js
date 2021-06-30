@@ -5,7 +5,7 @@ import HomeArticle from '../components/home/HomeArticle';
 import Footer from '../components/header-footer/Footer';
 import SocialNetwork from '../components/social_network/SocialNetwork';
 
-const Home = ({ color, anim, selecProduits, setSelecProduits }) => {
+const Home = ({ color, anim, itemCount }) => {
   
  
 
@@ -14,7 +14,7 @@ const Home = ({ color, anim, selecProduits, setSelecProduits }) => {
 
   return (
     <div className="home">
-      <Header anim={anim}/>
+      <Header anim={anim} itemCount={itemCount}/>
       <Image />
       <HomeArticle />
       <Footer color={color} />

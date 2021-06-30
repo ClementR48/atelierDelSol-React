@@ -5,10 +5,14 @@ import { ShoppingCart, Menu } from 'react-feather';
 import gsap from 'gsap/gsap-core';
 
 
-const Header = ({ anim }) => {
+const Header = ({ anim, itemCount }) => {
   const ul = useRef(null) ;
   const image = useRef(null) ;
   const cart = useRef(null) ;
+
+  if(itemCount === 0) {
+    itemCount = ''
+  }
 
 
   const gsapAnim = () => {
@@ -25,9 +29,6 @@ const Header = ({ anim }) => {
 
   },[])
     
-
-
-
   return (
     <header className="header">
       <nav className="nav">
@@ -40,6 +41,7 @@ const Header = ({ anim }) => {
         </ul>
         <div ref={cart}>
           <NavLink exact to="/panier" activeClassName="nav-active"><ShoppingCart className="cart"  size={22} /></NavLink> 
+          <span>{itemCount}</span>
         </div>   
 
         <ul className="nav-small">

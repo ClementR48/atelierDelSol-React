@@ -7,12 +7,12 @@ import SocialNetwork from '../components/social_network/SocialNetwork';
 
 
 
-const Tienda = ({ color, listProduit, displayList, categories, allProduits ,displayProduit }) => {
+const Tienda = ({ color, listProduit, displayList, categories, allProduits ,displayProduit, itemCount }) => {
 
 
   return (
     <div className="tienda">
-      <Header />
+      <Header itemCount={itemCount}/>
       <Categorie
         categories={categories}
         allProduits={allProduits}

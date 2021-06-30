@@ -1,20 +1,23 @@
-import Home from "./pages/Home";
-import{ BrowserRouter,Switch, Route, useParams } from "react-router-dom";
-import Tienda from "./pages/Tienda";
-import Contact from "./pages/Contact";
-import About from "./pages/About";
-import Cart from "./pages/Cart";
-import Produit from "./pages/Produit";
-import { useEffect, useState } from "react";
-import produits from "./utils/produits";
-import ScrollToTop from "./components/ScrollToTop";
-
+import Home from './pages/Home'
+import { BrowserRouter, Switch, Route, useParams } from 'react-router-dom'
+import Tienda from './pages/Tienda'
+import Contact from './pages/Contact'
+import About from './pages/About'
+import Cart from './pages/Cart'
+import Produit from './pages/Produit'
+import { useEffect, useState } from 'react'
+import produits from './utils/produits'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
-  const [ listProduit, setListProduit ] = useState([]);
-  const [ oneProduit, setOneProduit] = useState([])
-  const [ anim ] = useState(true);
-  const [ selecProduits, setSelecProduits ] =useState([])
+
+  const [listProduit, setListProduit] = useState([])
+  const [anim] = useState(true)
+  const [selecProduits, setSelecProduits] = useState([])
+  const [itemCount, setItemCount] = useState(0)
+
+ console.log(selecProduits);
+
 
   const color = {
     home: 'rgba(254,166,129,0.7)',
@@ -23,91 +26,85 @@ function App() {
     about: 'rgba(255,212,189,0.7)',
     cart: '',
     produit: 'rgba(255,239,168,0.7)',
-  };
+  }
 
-  
-
-  const allCategories = produits.map((produit) => produit.categorie);
-  const categories = allCategories.filter((ele, pos) => allCategories.indexOf(ele) === pos)
-
+  const allCategories = produits.map((produit) => produit.categorie)
+  const categories = allCategories.filter(
+    (ele, pos) => allCategories.indexOf(ele) === pos,
+  )
 
   const fetchProducts = async () => {
-    const products = await produits;
+    const products = await produits
     setListProduit(products)
   }
 
-  
-
-  
-  
-
-  const totalSelecProduits = () => {
-   const arrayProduits = [...selecProduits]
-   return arrayProduits
-  }
-  
 
 
-  const displayProduit = (id) => {
-     
-    const produit = produits.find(produit => produit.id === id);
-    setOneProduit(produit) 
+
+  const cartItems = (id) => {
+    const produit = produits.find((produit) => produit.id === id) 
+
+    const array2 = [...selecProduits, produit]
+    setSelecProduits(array2)
   }
 
-  
-  const displayList = ((category) => {
-    const produitsFilter = produits.filter(produits => produits.categorie === category);
+  const displayList = (category) => {
+    const produitsFilter = produits.filter(
+      (produits) => produits.categorie === category,
+    )
     setListProduit(produitsFilter)
-  });
+  }
 
-  const allProduits = (() => {
+  const allProduits = () => {
     setListProduit(produits)
-  })
+  }
 
   useEffect(() => {
     fetchProducts()
-  },[])
-
-  
-
-
- 
-
+  }, [])
 
   return (
     <BrowserRouter>
-    <ScrollToTop />
+      <ScrollToTop />
       <Switch>
         <Route path="/" exact>
-          <Home color={color.home} anim={anim} selecProduits={selecProduits} setSelecProduits={setSelecProduits} />
+          <Home
+            color={color.home}
+            itemCount={itemCount}
+            anim={anim}
+          />
         </Route>
-        <Route path="/tienda" exact >
-          <Tienda color={color.tienda}
+        <Route path="/tienda" exact>
+          <Tienda
+            color={color.tienda}
+            itemCount={itemCount}
             listProduit={listProduit}
             displayList={displayList}
             categories={categories}
             allProduits={allProduits}
-            displayProduit={displayProduit}
-            
           />
         </Route>
-        <Route path="/contact" exact >
-          <Contact color={color.contact}/>
+        <Route path="/contact" exact>
+          <Contact color={color.contact} />
         </Route>
-        <Route path="/à-propos" exact  >
-          <About color={color.about}/>
+        <Route path="/à-propos" exact>
+          <About color={color.about} />
         </Route>
-        <Route path="/panier" exact  >
-          <Cart color={color.tienda}/>
+        <Route path="/panier" exact>
+          <Cart color={color.tienda} selecProduits={selecProduits}/>
         </Route>
-        <Route path="/produit/:id" >
-          <Produit color={color.produit} produits={produits} />
+        <Route path="/produit/:id">
+          <Produit
+            color={color.produit}
+            produits={produits}
+            itemCount={itemCount}
+            setItemCount={setItemCount}
+            cartItems={cartItems}
+                    />
         </Route>
-        
       </Switch>
-      
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,17 +1,22 @@
 
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import image1 from "../../images/testImageShop1Bis.jpg"
 
-const FicheProduit = ({ produits }) => {
+const FicheProduit = ({ produits,itemCount, setItemCount, cartItems}) => {
 
   const { id } = useParams();
+  const error = useHistory()
   let idNumber = parseInt(id);
   const [ product, setProduct ] = useState(null)
   
   useEffect(() => {
     const produit = produits.find(item => item.id === idNumber)
-
+    if(!produit){
+      return error.push('/tienda')
+        
+      
+    }
     setProduct(produit)
 
   })
@@ -40,7 +45,10 @@ const FicheProduit = ({ produits }) => {
           <p>largeur: {product.dimensions.largeur}cm</p>
         </div>
         <p className="prix">{product.prix}€</p>
-        <button>Ajouter au panier </button>
+        <button onClick={() => {
+            setItemCount(itemCount + 1) 
+            cartItems(product.id)}}
+            >Ajouter au panier </button>
       </div>
 
 
