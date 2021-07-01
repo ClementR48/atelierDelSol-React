@@ -1,15 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Footer from '../components/header-footer/Footer';
 import Header from '../components/header-footer/Header';
 
 const Cart = ({ color, selecProduits }) => {
 
-  const prices = [0]
-  console.log(prices);
-  const reducer = (accumulator, currentValue) => accumulator + currentValue;
-  console.log(prices.reduce(reducer,0));
+  const [ prices, setPrices ] = useState([])
+  const [ sum, setSum ] = useState()
 
-  console.log(prices[0]);
+  
+  useEffect(() => {
+    
+
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    setSum(prices.reduce(reducer,0))
+    
+    
+   
+  }, [prices])
+  console.log(sum);
+  
+
+  
   
 
   return (
@@ -17,7 +28,7 @@ const Cart = ({ color, selecProduits }) => {
       <Header />
       <ul>
         {selecProduits.map((produit) => {
-          prices.push(produit.prix)
+          prices.push(produit.prix) 
           return (<li>{produit.prix}</li> )}
           
           // eslint-disable-next-line no-lone-blocks
@@ -25,7 +36,7 @@ const Cart = ({ color, selecProduits }) => {
           
         )}
       </ul>
-      <div></div>
+      <div>{sum}</div>
       <Footer color={color}/>
       
     </div>
