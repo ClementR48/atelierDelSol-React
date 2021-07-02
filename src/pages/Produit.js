@@ -5,7 +5,7 @@ import Header from '../components/header-footer/Header';
 import FicheProduit from '../components/produit/FicheProduit';
 import SocialNetwork from '../components/social_network/SocialNetwork';
 
-const Produit = ({ color, produits, itemCount, setItemCount, cartItems }) => {
+const Produit = ({ color, produits, itemCount, setItemCount, cartItems, selecProduits }) => {
 
 
 
@@ -19,6 +19,7 @@ const Produit = ({ color, produits, itemCount, setItemCount, cartItems }) => {
         setItemCount={setItemCount}
         itemCount={itemCount}
         cartItems={cartItems}
+        selecProduits={selecProduits}
        />
       <SocialNetwork />
       <Footer color={color}/>

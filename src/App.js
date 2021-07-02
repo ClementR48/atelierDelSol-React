@@ -16,7 +16,17 @@ function App() {
   const [selecProduits, setSelecProduits] = useState([])
   const [itemCount, setItemCount] = useState(0)
 
- console.log(selecProduits);
+ 
+  
+
+  
+  
+  
+  
+
+  
+
+ 
 
 
   const color = {
@@ -63,6 +73,10 @@ function App() {
     fetchProducts()
   }, [])
 
+  useEffect(() => {
+    setItemCount(selecProduits.length)
+  }, [selecProduits])
+
   return (
     <BrowserRouter>
       <ScrollToTop />
@@ -91,7 +105,7 @@ function App() {
           <About color={color.about} />
         </Route>
         <Route path="/panier" exact>
-          <Cart color={color.tienda} selecProduits={selecProduits}/>
+          <Cart color={color.tienda} selecProduits={selecProduits} setSelecProduits={setSelecProduits} />
         </Route>
         <Route path="/produit/:id">
           <Produit
@@ -100,6 +114,7 @@ function App() {
             itemCount={itemCount}
             setItemCount={setItemCount}
             cartItems={cartItems}
+            selecProduits={selecProduits}
                     />
         </Route>
       </Switch>
