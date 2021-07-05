@@ -3,10 +3,10 @@ import AboutMe from '../components/about/AboutMe';
 import Header from '../components/header-footer/Header';
 import Footer from '../components/header-footer/Footer';
 
-const About = ({ color }) => {
+const About = ({ color, itemCount }) => {
   return (
     <div className="about-page">
-      <Header />
+      <Header itemCount={itemCount} />
       <AboutMe />
       <Footer color={color}/>
     </div>

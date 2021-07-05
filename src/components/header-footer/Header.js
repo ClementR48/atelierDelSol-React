@@ -1,8 +1,15 @@
+
 import React, { useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from "../../images/logo2.png";
-import { ShoppingCart, Menu } from 'react-feather';
+
+//Animation GSAP
 import gsap from 'gsap/gsap-core';
+
+//SVG
+import { ShoppingCart, Menu } from 'react-feather';
+
+//logo
+import logo from "../../images/logo2.png";
 
 
 const Header = ({ anim, itemCount }) => {
@@ -10,9 +17,7 @@ const Header = ({ anim, itemCount }) => {
   const image = useRef(null) ;
   const cart = useRef(null) ;
 
-  if(itemCount === 0) {
-    itemCount = ''
-  }
+  
 
 
   const gsapAnim = () => {
@@ -21,7 +26,10 @@ const Header = ({ anim, itemCount }) => {
       gsap.from(image.current, {x:-200 , duration:1, opacity:0, delay:1})
       gsap.from(cart.current, {y:100 , duration:1, opacity:0, })
     }
+  }
 
+  if(itemCount === 0) {
+    itemCount = ''
   }
 
   useEffect(() => {

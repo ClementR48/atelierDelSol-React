@@ -4,10 +4,10 @@ import Footer from '../components/header-footer/Footer';
 import Introduction from '../components/contact/Introduction';
 import Formulaire from '../components/contact/Formulaire';
 
-const Contact = ({ color }) => {
+const Contact = ({ color, itemCount }) => {
   return (
     <div className="contact-page">
-      <Header />
+      <Header itemCount={itemCount}/>
       <Introduction />
       <Formulaire />
       <Footer color={color} />

@@ -7,7 +7,7 @@ import  ImageMain  from "../../images/homeMainImage2.jpg";
 
 
 const Image = () => {
-  let Image = useRef(null) ;
+  let image = useRef(null) ;
   const els = useRef([])
   
   const textImage = "La céramique inspirée"
@@ -19,7 +19,7 @@ const Image = () => {
 
    useEffect(() => {
     const timeLine = gsap.timeline({delay:0});
-    timeLine.from(Image.current, {y:400, duration: 1, opacity:0})
+    timeLine.from(image.current, {y:400, duration: 1, opacity:0})
     
     gsap.to(els.current[0], {y:-100 , duration:0.6, delay: 1, opacity:1,ease:'power4' })
     gsap.to(els.current[1], {y:-110 , duration:0.6, delay: 1.1, opacity:1,ease:'power4' })
@@ -49,7 +49,7 @@ const Image = () => {
 
   return (
     <div className="image" >
-      <img ref={Image} src={ImageMain} alt="vases"></img>
+      <img ref={image} src={ImageMain} alt="vases"></img>
       <div className="text">
         {textImageSplit.map((letter, index) => 
            <li ref={(element) => els.current[index] = element}  key={index}>{letter}</li>

@@ -1,78 +1,48 @@
-import Home from './pages/Home'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+
+// Components utils scroll haut de page
+import ScrollToTop from './components/ScrollToTop'
+
+// Components
+import Home from './pages/Home'
 import Tienda from './pages/Tienda'
 import Contact from './pages/Contact'
 import About from './pages/About'
 import Cart from './pages/Cart'
 import Produit from './pages/Produit'
-import { useEffect, useState } from 'react'
+
+// Utils
+import color from './utils/color'
 import produits from './utils/produits'
-import ScrollToTop from './components/ScrollToTop'
 
 function App() {
 
-  const [listProduit, setListProduit] = useState([])
   const [anim] = useState(true)
-  const [selecProduits, setSelecProduits] = useState([])
+  const [produitsSelectiones, setProduitsSelectiones] = useState([])
   const [itemCount, setItemCount] = useState(0)
-  let localData = JSON.parse(localStorage.getItem('data'))
   
-  if (localData === null) {
-    localData =[];
-  }
-  console.log(localData);
- 
-  const color = {
-    home: 'rgba(254,166,129,0.7)',
-    tienda: 'rgba(227,240,185,0.7)',
-    contact: 'rgba(255,239,168,0.7)',
-    about: 'rgba(255,212,189,0.7)',
-    cart: 'rgba(255,239,168,0.7)',
-    produit: 'rgba(255,239,168,0.7)',
-  }
-
-  const allCategories = produits.map((produit) => produit.categorie)
-  const categories = allCategories.filter(
-    (ele, pos) => allCategories.indexOf(ele) === pos,
-  )
-
-  const fetchProducts = async () => {
-    const products = await produits
-    setListProduit(products)
-  }
-
-
-
+  
+  
 
   const cartItems = (id) => {
-    const produit = produits.find((produit) => produit.id === id) 
+    const produit = produits.find((produit) => produit.id === id)
 
-    const array2 = [...selecProduits, produit]
-    setSelecProduits(array2)
-  }
-
-  const displayList = (category) => {
-    const produitsFilter = produits.filter(
-      (produits) => produits.categorie === category,
-    )
-    setListProduit(produitsFilter)
-  }
-
-  const allProduits = () => {
-    setListProduit(produits)
+    const array2 = [...produitsSelectiones, produit]
+    setProduitsSelectiones(array2)
   }
 
   useEffect(() => {
-    fetchProducts()
-    setSelecProduits(localData)
- 
+
+    
+    
+
   }, [])
 
-
-
   useEffect(() => {
-    setItemCount(selecProduits.length)
-  }, [selecProduits])
+     setItemCount(produitsSelectiones.length) 
+    
+  }, [produitsSelectiones])
 
   return (
     <BrowserRouter>
@@ -85,36 +55,45 @@ function App() {
             anim={anim}
           />
         </Route>
-        <Route path="/tienda" exact>
+         <Route path="/tienda" exact>
           <Tienda
             color={color.tienda}
             itemCount={itemCount}
-            listProduit={listProduit}
-            displayList={displayList}
-            categories={categories}
-            allProduits={allProduits}
+            produits={produits}
           />
         </Route>
         <Route path="/contact" exact>
-          <Contact color={color.contact} />
+          <Contact
+            color={color.contact}
+            itemCount={itemCount}
+          />
         </Route>
-        <Route path="/à-propos" exact>
-          <About color={color.about} />
+         <Route path="/à-propos" exact>
+          <About
+            color={color.about}
+            itemCount={itemCount}
+          />
         </Route>
         <Route path="/panier" exact>
-          <Cart color={color.cart} selecProduits={selecProduits} setSelecProduits={setSelecProduits} localData={localData} />
+          <Cart
+            color={color.cart}
+            itemCount={itemCount}
+            produitsSelectiones={produitsSelectiones}
+            setProduitsSelectiones={setProduitsSelectiones}
+            
+          />
         </Route>
         <Route path="/produit/:id">
           <Produit
             color={color.produit}
             produits={produits}
             itemCount={itemCount}
-            setItemCount={setItemCount}
             cartItems={cartItems}
-            selecProduits={selecProduits}
-            localData={localData}
-                    />
-        </Route>
+            produitsSelectiones={produitsSelectiones}
+            setProduitsSelectiones={setProduitsSelectiones}
+             
+          />
+        </Route>  
       </Switch>
     </BrowserRouter>
   )
