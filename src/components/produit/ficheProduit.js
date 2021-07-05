@@ -3,12 +3,17 @@ import { useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import image1 from "../../images/testImageShop1Bis.jpg"
 
-const FicheProduit = ({ produits, cartItems, selecProduits}) => {
+const FicheProduit = ({ produits, cartItems, selecProduits, localData}) => {
 
   const { id } = useParams();
   const error = useHistory()
   let idNumber = parseInt(id);
   const [ product, setProduct ] = useState(null)
+  
+ 
+
+  
+  
   
   useEffect(() => {
     const produit = produits.find(item => item.id === idNumber)
@@ -18,8 +23,11 @@ const FicheProduit = ({ produits, cartItems, selecProduits}) => {
       
     }
     setProduct(produit)
+    
 
   }, [product])
+
+
 
   if (!product){return null}
 
@@ -46,7 +54,18 @@ const FicheProduit = ({ produits, cartItems, selecProduits}) => {
         </div>
         <p className="prix">{product.prix}€</p>
         <button onClick={() => {
-            localStorage.setItem('produit', JSON.stringify(product))
+          
+            if(localData){
+              localData.push(product)
+              localStorage.setItem('data',JSON.stringify(localData))
+
+            }else {
+              localData = [];
+              localData.push(product);
+              localStorage.setItem('data',JSON.stringify(localData))
+            }
+            console.log(localData);
+            
             cartItems(product.id)}}
             >{ selecProduits.length > 0 ? 'Un de plus peut-etre ?' : 'Ajouter au panier' }</button>
       </div>

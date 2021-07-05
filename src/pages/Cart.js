@@ -4,14 +4,14 @@ import CartList from '../components/cart/CartList'
 import Footer from '../components/header-footer/Footer'
 import Header from '../components/header-footer/Header'
 
-const Cart = ({ color, selecProduits, setSelecProduits }) => {
+const Cart = ({ color, selecProduits, setSelecProduits, localData }) => {
 
   
 
   return (
     <div className="cartpage">
       <Header />
-      <CartList selecProduits={selecProduits} setSelecProduits={setSelecProduits} />
+      <CartList selecProduits={selecProduits} setSelecProduits={setSelecProduits} localData={localData} />
       <Footer color={color} />
     </div>
   )

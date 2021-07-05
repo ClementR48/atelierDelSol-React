@@ -3,16 +3,19 @@ import { Trash } from 'react-feather';
 import { Link } from 'react-router-dom';
 import  image  from "../../images/testImageShop2Bis.jpg"
 
-const CartItem = ({ id, titre, prix, index, selecProduits, setSelecProduits}) => {
+const CartItem = ({ id, titre, prix, index, selecProduits, setSelecProduits, localData}) => {
 
-console.log(selecProduits);
 
-const filteredProduit = (id) => {
-  let newArray = selecProduits.filter((item, index) => index !== id )
+
+const filteredProduit = (i) => {
+  let newArray = selecProduits.filter((item, index) => index !== i )
   setSelecProduits(newArray)
+  localStorage.setItem('data',JSON.stringify(newArray))
   return newArray
 }
 
+
+console.log();
 
 
 
@@ -22,7 +25,7 @@ const filteredProduit = (id) => {
       <Link to={`/produit/${id}`}>{titre}</Link>
       <p>{prix}</p>
       <Trash id={id} onClick={() =>{ 
-        localStorage.removeItem(titre)
+        
         filteredProduit(index)} }/>
     </div>
   );

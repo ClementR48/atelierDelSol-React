@@ -15,26 +15,19 @@ function App() {
   const [anim] = useState(true)
   const [selecProduits, setSelecProduits] = useState([])
   const [itemCount, setItemCount] = useState(0)
-
+  let localData = JSON.parse(localStorage.getItem('data'))
+  
+  if (localData === null) {
+    localData =[];
+  }
+  console.log(localData);
  
-  
-
-  
-  
-  
-  
-
-  
-
- 
-
-
   const color = {
     home: 'rgba(254,166,129,0.7)',
     tienda: 'rgba(227,240,185,0.7)',
     contact: 'rgba(255,239,168,0.7)',
     about: 'rgba(255,212,189,0.7)',
-    cart: '',
+    cart: 'rgba(255,239,168,0.7)',
     produit: 'rgba(255,239,168,0.7)',
   }
 
@@ -71,7 +64,11 @@ function App() {
 
   useEffect(() => {
     fetchProducts()
+    setSelecProduits(localData)
+ 
   }, [])
+
+
 
   useEffect(() => {
     setItemCount(selecProduits.length)
@@ -105,7 +102,7 @@ function App() {
           <About color={color.about} />
         </Route>
         <Route path="/panier" exact>
-          <Cart color={color.tienda} selecProduits={selecProduits} setSelecProduits={setSelecProduits} />
+          <Cart color={color.cart} selecProduits={selecProduits} setSelecProduits={setSelecProduits} localData={localData} />
         </Route>
         <Route path="/produit/:id">
           <Produit
@@ -115,6 +112,7 @@ function App() {
             setItemCount={setItemCount}
             cartItems={cartItems}
             selecProduits={selecProduits}
+            localData={localData}
                     />
         </Route>
       </Switch>
