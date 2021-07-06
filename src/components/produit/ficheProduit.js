@@ -1,20 +1,48 @@
+import { useEffect, useState } from "react";
 
 
-import image1 from "../../images/testImageShop1Bis.jpg"
+
 
 const FicheProduit = ({ product, cartItems, produitsSelectiones}) => {
 
+  const [imagesOrder, setImagesOrder] = useState([])
+  
 
-  if (!product){return null}
+useEffect(() => {
+  
+  setImagesOrder([product.image, product.miniImage.first, product.miniImage.seconde, product.miniImage.third])
+  console.log(imagesOrder);
+  
+}, [])
+
+
+
+  
+ 
+   
+  
+
 
      return (
      <main className="fiche-produit">
       <div className="images">
-        <img src={image1} alt="illustration produit"></img>
+        <img src={imagesOrder[0]} alt="illustration produit"></img>
         <div className="photo-mini">
-          <img src=''></img>
-          <img src=''></img>
-          <img src=''></img>
+          <img src={imagesOrder[1]} alt='' onClick={() => {
+            setImagesOrder([imagesOrder[1],imagesOrder[0],  imagesOrder[2], imagesOrder[3]])
+            
+          }}
+          ></img>
+          <img src={imagesOrder[2]} alt='' onClick={() => {
+            setImagesOrder([imagesOrder[2],imagesOrder[1],  imagesOrder[0], imagesOrder[3]])
+            
+          }}></img>
+          <img src={imagesOrder[3]} alt=''onClick={() => {
+            setImagesOrder([imagesOrder[3],imagesOrder[1],  imagesOrder[2], imagesOrder[0]])
+            
+          }}></img>
+     
+
         </div>
       </div>
       <div className='informations'>

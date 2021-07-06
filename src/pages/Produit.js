@@ -44,7 +44,7 @@ const Produit = ({
   return (
     <div className="produit-page">
       <Header itemCount={itemCount} />
-      <FicheProduit
+      {product && <FicheProduit
         product={product}
         cartItems={cartItems}
         setItemCount={setItemCount}
@@ -52,7 +52,7 @@ const Produit = ({
         setProduitsSelectiones={setProduitsSelectiones}
         localData={localData}
         
-       />
+       />}
       <SocialNetwork />
       <Footer color={color}/>
     </div>

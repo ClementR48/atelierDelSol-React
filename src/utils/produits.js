@@ -5,7 +5,12 @@ export default [
     id:1,
     titre: 'vase aux grands bras',
     description: 'vase modelé à la main avec la technique du colombin. Faïence blanche texturée Email transparent et turquoise',
-    image: '../../images/testImageShop1Bis.jpg',
+    image: 'http://image.noelshack.com/fichiers/2021/27/2/1625559826-testimageshop3bis.jpg',
+    miniImage : {
+      first: 'http://image.noelshack.com/fichiers/2021/27/2/1625559854-testimageshop4bis.jpg',
+      seconde: 'http://image.noelshack.com/fichiers/2021/27/2/1625559855-testimageshop5bis.jpg',
+      third :'http://image.noelshack.com/fichiers/2021/27/2/1625559855-testimageshop5bis.jpg'
+    },
     categorie: 'vase',
     dimensions: 
     {
@@ -20,7 +25,12 @@ export default [
     id:2,
     titre: 'theiere de mamie ',
     description: 'vase modelé à la main avec la technique du colombin. Faïence blanche texturée Email transparent et turquoise',
-    image: '../images/aproposMarie.jpg',
+    image: 'http://image.noelshack.com/fichiers/2021/27/2/1625559826-testimageshop3bis.jpg',
+    miniImage : {
+      first: 'http://image.noelshack.com/fichiers/2021/27/2/1625559854-testimageshop4bis.jpg',
+      seconde: 'http://image.noelshack.com/fichiers/2021/27/2/1625559855-testimageshop5bis.jpg',
+      third :'http://image.noelshack.com/fichiers/2021/27/2/1625559855-testimageshop5bis.jpg'
+    },
     categorie: 'theiere',
     dimensions: 
     {
@@ -35,7 +45,12 @@ export default [
     id:3,
     titre: 'main de dieu',
     description: 'vase modelé à la main avec la technique du colombin. Faïence blanche texturée Email transparent et turquoise',
-    image: '../images/aproposMarie.jpg',
+    image: 'http://image.noelshack.com/fichiers/2021/27/2/1625559826-testimageshop3bis.jpg',
+    miniImage : {
+      first: 'http://image.noelshack.com/fichiers/2021/27/2/1625559854-testimageshop4bis.jpg',
+      seconde: 'http://image.noelshack.com/fichiers/2021/27/2/1625559855-testimageshop5bis.jpg',
+      third :'http://image.noelshack.com/fichiers/2021/27/2/1625559855-testimageshop5bis.jpg'
+    },
     categorie: 'porte-savons',
     dimensions: 
     {
@@ -50,7 +65,12 @@ export default [
     id:4,
     titre: 'vase aux grands bras',
     description: 'vase modelé à la main avec la technique du colombin. Faïence blanche texturée Email transparent et turquoise',
-    image: '../../images/testImageShop1Bis.jpg',
+    image: 'http://image.noelshack.com/fichiers/2021/27/2/1625559826-testimageshop3bis.jpg',
+    miniImage : {
+      first: 'http://image.noelshack.com/fichiers/2021/27/2/1625559854-testimageshop4bis.jpg',
+      seconde: 'http://image.noelshack.com/fichiers/2021/27/2/1625559855-testimageshop5bis.jpg',
+      third :'http://image.noelshack.com/fichiers/2021/27/2/1625559855-testimageshop5bis.jpg'
+    },
     categorie: 'vase',
     dimensions: 
     {

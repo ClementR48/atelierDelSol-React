@@ -1,9 +1,9 @@
-import imageTest1 from '../../images/testImageShop1Bis.jpg'
 
-const Produit = ({ titre, categorie, prix }) => {
+
+const Produit = ({ titre, categorie, prix, image }) => {
   return (
     <div className="produit">
-      <img src={imageTest1} alt="produit-vase"></img>
+      <img src={image} alt="produit-vase"></img>
       <div className="caption">
         <div className="about">
           <h2>{titre}</h2>

@@ -1,12 +1,13 @@
 
 import { Trash } from 'react-feather';
 import { Link } from 'react-router-dom';
-import  image  from "../../images/testImageShop2Bis.jpg"
+
 
 const CartItem = ({
         id,
         titre,
         prix,
+        image,
         index,
         produitsSelectiones,
         setProduitsSelectiones,

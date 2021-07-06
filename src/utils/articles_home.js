@@ -3,7 +3,7 @@ export default  [
   {
     titre:'Parler avec la nature',
     description:'pas grand chose pour l\'instant',
-    image: ''
+    image: 'http://image.noelshack.com/fichiers/2021/27/2/1625558819-homeimage2bis.jpg'
   },
   {
     titre: 'Valoriser l\'artisanat',
