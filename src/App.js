@@ -22,7 +22,7 @@ function App() {
   const [produitsSelectiones, setProduitsSelectiones] = useState([])
   const [itemCount, setItemCount] = useState(0)
   
-  
+  let localData = JSON.parse(localStorage.getItem('data'))
   
 
   const cartItems = (id) => {
@@ -33,11 +33,12 @@ function App() {
   }
 
   useEffect(() => {
-
-    
-    
-
+    if (localData) {
+      setProduitsSelectiones(localData)
+    }
   }, [])
+
+
 
   useEffect(() => {
      setItemCount(produitsSelectiones.length) 

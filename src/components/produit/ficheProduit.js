@@ -2,11 +2,7 @@
 
 import image1 from "../../images/testImageShop1Bis.jpg"
 
-const FicheProduit = ({ product, cartItems, produitsSelectiones, localData}) => {
-
-
-  
-
+const FicheProduit = ({ product, cartItems, produitsSelectiones}) => {
 
 
   if (!product){return null}
@@ -34,13 +30,14 @@ const FicheProduit = ({ product, cartItems, produitsSelectiones, localData}) => 
         </div>
         <p className="prix">{product.prix}€</p>
         <button onClick={() => {
-          
+         let localData = JSON.parse(localStorage.getItem('data'))
             if(localData){
               
               localData.push(product)
               localStorage.setItem('data',JSON.stringify(localData))
 
             }else {
+              
               localData = [];
               localData.push(product);
               localStorage.setItem('data',JSON.stringify(localData))
