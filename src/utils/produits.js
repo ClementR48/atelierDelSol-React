@@ -4,7 +4,7 @@ export default [
   {
     id:1,
     titre: 'Vase aux grands bras',
-    description: 'vase modelé à la main avec la technique du colombin. Faïence blanche texturée Email transparent et turquoise',
+    description: 'Vase modelé à la main avec la technique du colombin. Faïence blanche texturée Email transparent et turquoise',
     image: 'http://image.noelshack.com/fichiers/2021/27/2/1625559826-testimageshop3bis.jpg',
     miniImage : {
       first: 'http://image.noelshack.com/fichiers/2021/27/2/1625559854-testimageshop4bis.jpg',
@@ -24,7 +24,7 @@ export default [
   {
     id:2,
     titre: 'Theiere de mamie ',
-    description: 'vase modelé à la main avec la technique du colombin. Faïence blanche texturée Email transparent et turquoise',
+    description: 'Vase modelé à la main avec la technique du colombin. Faïence blanche texturée Email transparent et turquoise',
     image: 'http://image.noelshack.com/fichiers/2021/27/2/1625559826-testimageshop3bis.jpg',
     miniImage : {
       first: 'http://image.noelshack.com/fichiers/2021/27/2/1625559854-testimageshop4bis.jpg',
@@ -44,7 +44,7 @@ export default [
   {
     id:3,
     titre: 'Main de dieu',
-    description: 'vase modelé à la main avec la technique du colombin. Faïence blanche texturée Email transparent et turquoise',
+    description: 'Vase modelé à la main avec la technique du colombin. Faïence blanche texturée Email transparent et turquoise',
     image: 'http://image.noelshack.com/fichiers/2021/27/2/1625559826-testimageshop3bis.jpg',
     miniImage : {
       first: 'http://image.noelshack.com/fichiers/2021/27/2/1625559854-testimageshop4bis.jpg',
@@ -64,7 +64,7 @@ export default [
   {
     id:4,
     titre: 'Vase aux grands bras',
-    description: 'vase modelé à la main avec la technique du colombin. Faïence blanche texturée Email transparent et turquoise',
+    description: 'Vase modelé à la main avec la technique du colombin. Faïence blanche texturée Email transparent et turquoise',
     image: 'http://image.noelshack.com/fichiers/2021/27/2/1625559826-testimageshop3bis.jpg',
     miniImage : {
       first: 'http://image.noelshack.com/fichiers/2021/27/2/1625559854-testimageshop4bis.jpg',

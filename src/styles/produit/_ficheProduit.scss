@@ -1,9 +1,10 @@
 .fiche-produit {
-  margin: 5% 5%;
+  margin: 10% 5%;
   display: flex;
+  justify-content: center;
 
   .images {
-    width: 45%;
+    flex: 0.5;
     img {
       width: 100%;
     }
@@ -19,32 +20,52 @@
   }
 
   .informations {
-    padding-left: 5%;
+    background-color: rgba(255,242,188, 0.5);
+    margin-left: 5%;
+    flex: 0.3;
+    padding: 5%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    width: 35%;
-    padding-bottom: 15%;
+    justify-content: space-between;
+  
+    
+    
     h2 {
-      font-size: 4em;
+      font-size: 3em;
+      text-align: center;
     }
 
     .description {
       color: $colorText;
+      text-align: center;
+      font-size: 1.2em;
+      font-style: italic;
     }
 
     .dimensions {
       color: $colorText;
+      text-align: center;
+      font-size: 1.2em;
     }
 
     .prix {
       color: $colorText;
-      font-size: 1.2em;
+      font-size: 1.4em;
+      text-align: center;
+      font-weight: bold;
     }
 
     button {
+      border: none;
+      background-color: $colorFooterFont;
+      border-radius: 20px;
+      padding: 10px;
       color: $colorText;
       font-size: 1em;
+
+      &:hover {
+        background-color: $colorBlue;
+      }
     }
   }
 }

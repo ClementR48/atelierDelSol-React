@@ -1,14 +1,13 @@
 
 
-const Produit = ({ titre, categorie, prix, image }) => {
+const Produit = ({ titre, prix, image }) => {
   return (
     <div className="produit">
       <img src={image} alt="produit-vase"></img>
       <div className="caption">
         <div className="about">
-          <h2>{titre}</h2>
-          <p> {categorie}</p>
-          <p> {prix}€</p>
+          <h3>{titre}</h3>
+          <p>Prix: {prix}€</p>
         </div>
       </div>
     </div>

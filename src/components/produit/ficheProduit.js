@@ -45,8 +45,8 @@ useEffect(() => {
         {product.description}
         </p>
         <div className="dimensions">
-          <p>hauteur: {product.dimensions.hauteur}cm</p> 
-          <p>largeur: {product.dimensions.largeur}cm</p>
+          <p>Hauteur: {product.dimensions.hauteur}cm</p> 
+          <p>Largeur: {product.dimensions.largeur}cm</p>
         </div>
         <p className="prix">{product.prix}€</p>
         <button onClick={() => {
