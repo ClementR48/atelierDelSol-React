@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import CartItem from './CartItem';
+import { ArrowLeft } from 'react-feather';
 
 
 const CartList = ({produitsSelectiones, setProduitsSelectiones, localData}) => {
@@ -8,14 +9,18 @@ const CartList = ({produitsSelectiones, setProduitsSelectiones, localData}) => {
   
   const [sum, setSum] = useState()
   const reducer = (accumulator, currentValue) => accumulator + currentValue
-console.log(produitsSelectiones);
   const prix = []
   
-
+  let directionLien = ''
+  if(produitsSelectiones.length === 0) {
+    directionLien ='Voir la Tienda'
+  }else {
+    directionLien = 'Retour vers la Tienda'
+  }
 
   const affichage =() => {
     if(produitsSelectiones.length === 0) {
-      return <p> le panier est vide </p>
+      return <p> Votre panier est vide, n'hésitez a aller voir la Tienda  </p>
     }else {
       return(
         produitsSelectiones.map((produit, index) => {
@@ -39,17 +44,21 @@ console.log(produitsSelectiones);
   return (
     <div className="cartlist">
       <h2>Mon panier</h2>
-      <div className="list">
+      <div className="listandtotal">
+        <div className="list">
 
-        {affichage()}
-        
+          {affichage()}
+          
+        </div>
+        {produitsSelectiones.length === 0 ? '' :(
+        <div className="total">
+          <p>Nombre d'article:<span>{produitsSelectiones.length}</span></p>
+          <p>Sous-total:<span>{sum}€</span> </p>
+          
+          <Link to='/checkout'>Time to pay amigo</Link>
+        </div>)}
       </div>
-      {produitsSelectiones.length === 0 ? '' :(
-      <div className="total">
-        <p>Sous-total: {sum}€</p>
-        <p>Nombre d'article:{produitsSelectiones.length}</p>
-        <Link to='/checkout'>Time to pay amigo</Link>
-      </div>)}
+      <Link className="retour" to='/tienda'> <ArrowLeft />{directionLien} </Link>
     </div>
   );
 };

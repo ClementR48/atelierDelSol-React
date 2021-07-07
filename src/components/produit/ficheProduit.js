@@ -11,16 +11,8 @@ const FicheProduit = ({ product, cartItems, produitsSelectiones}) => {
 useEffect(() => {
   
   setImagesOrder([product.image, product.miniImage.first, product.miniImage.seconde, product.miniImage.third])
-  console.log(imagesOrder);
   
 }, [])
-
-
-
-  
- 
-   
-  
 
 
      return (

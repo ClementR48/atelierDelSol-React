@@ -28,9 +28,7 @@ const Header = ({ anim, itemCount }) => {
     }
   }
 
-  if(itemCount === 0) {
-    itemCount = ''
-  }
+
 
   useEffect(() => {
     gsapAnim()
@@ -48,19 +46,12 @@ const Header = ({ anim, itemCount }) => {
           <li><NavLink exact to="/à-propos" activeClassName="nav-active">About</NavLink> </li>
         </ul>
         <div ref={cart}>
-          <NavLink exact to="/panier" activeClassName="nav-active"><ShoppingCart className="cart"  size={22} /></NavLink> 
-          <span>{itemCount}</span>
+          <NavLink exact to="/panier" activeClassName="nav-active"><ShoppingCart className="cart"  size={22} /> 
+          <span>{itemCount}</span></NavLink>
         </div>   
 
-        <ul className="nav-small">
-          <li><NavLink exact to="/" activeClassName="nav-active">Acceuil</NavLink> </li>
-          <li><NavLink exact to="/tienda" activeClassName="nav-active">Tienda</NavLink> </li>
-          <li><NavLink exact to="/contact" activeClassName="nav-active">Contact</NavLink> </li>
-          <li><NavLink exact to="/à-propos" activeClassName="nav-active">About</NavLink> </li>
-        </ul> 
-        <div className="hamburger">
-          <Menu size={22} />
-        </div>
+       
+        
       </nav> 
     </header>
   );

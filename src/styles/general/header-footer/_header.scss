@@ -77,8 +77,37 @@
       margin-right: 5%;
       transform: translate(-50%, -50%);
 
+      span {
+        position: absolute;
+        font-size: 0.8em;
+        top: -15px;
+        background-color: $colorBlue;
+        border-radius: 50%;
+        text-align: center;
+        padding: 6px;
+ 
+        &:focus {
+          background-color: $colorFooterFont;
+        }
+      }
+
+      &:hover span {
+        color: black;
+        background-color: $colorFooterFont;
+      }
+
+      &:hover svg {
+        color: $colorBlue;
+      }
+      
+      
+
       .nav-active svg {
         color: $colorBlue;
+      }
+
+      .nav-active span {
+        background-color: $colorFooterFont;
       }
 
       .nav-active::before {
@@ -96,8 +125,10 @@
       svg {
         color: $colorHeaderFont;
 
+        
+
         &:hover {
-          color: $colorBlue;
+          
         }
       }
     }

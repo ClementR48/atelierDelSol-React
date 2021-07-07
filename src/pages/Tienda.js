@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 
+
+
 import Categorie from '../components/tienda/Categorie'
 import Footer from '../components/header-footer/Footer'
 import Header from '../components/header-footer/Header'
@@ -13,6 +15,7 @@ const Tienda = ({ color, itemCount, produits }) => {
     const products = await produits
     setListProduit(products)
   }
+
 
   // recuperation des catégories
   const allCategoriesAvecDoublon = produits.map((produit) => produit.categorie)

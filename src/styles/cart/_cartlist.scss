@@ -1,12 +1,100 @@
 .cartlist {
-  margin: 5% 5%;
+  margin: 10% 5%;
+  
 
   h2 {
   }
 
-  .list {
+  .listandtotal {
+    display: flex;
     margin: 5% 0;
     border-bottom: 1px solid black;
     padding: 0 5% 5% 5%;
+    align-items: flex-end;
+
+    .list {
+   
+      flex: 0.7;
+    }
+
+    .total {
+      border: 2px $colorFooterFont dashed;
+      padding:2%;
+      margin-left: 20px;
+      flex: 0.3;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: fit-content;
+      transition: all 0.2s;
+      
+      &:hover {
+        border: 2px $colorCategBg dashed;
+        transform: scale(1.05);
+        
+      }
+      
+
+      p{
+        display: flex;
+        margin-bottom: 30px;
+        justify-content: space-between;
+        font-style: italic;
+
+        span {
+          font-weight: bold;
+        }
+      }
+
+      a{
+        text-align: center;
+        color: $colorCategBg;
+        background-color: $colorFooterFont;
+        padding: 10px;
+        transition: all 0.2s;
+        text-decoration: none;
+
+        &:hover {
+          color: $colorFooterFont;
+          background-color: $colorCategBg;
+          transition: all 0.2s;
+        }
+        
+      }
+      
+    }
   }
+
+  .retour {
+    padding: 2%;
+    margin-left: 50px;
+    text-decoration: none;
+    color: $colorBlue;
+    transition: all 0.2s;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    
+    
+
+    & > svg {
+      padding-right: 5%;
+      transition: all 0.2s;
+    }
+
+    &:hover svg {
+      transform: translateX(-10px);
+      transition: all 0.2s;
+      
+    }
+
+    &:hover{
+      color: blue;
+      transform: translateX(-10px);
+      transition: all 0.2s;
+      
+    }
+  }
+
+
 }

@@ -11,11 +11,15 @@
 
   .listSocialNetwork {
     line-height: 2;
+    ;
 
     li {
+      display: flex;
+      justify-content: space-between;
       color: $colorFooterFont;
 
       span {
+        padding-right: 30px;
         text-decoration: underline;
         font-weight: bold;
       }
