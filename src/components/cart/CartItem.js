@@ -1,4 +1,5 @@
 
+import { useEffect, useState } from 'react';
 import { Trash } from 'react-feather';
 import { Link } from 'react-router-dom';
 
@@ -9,9 +10,12 @@ const CartItem = ({
         prix,
         image,
         index,
+        miniImage,
         produitsSelectiones,
         setProduitsSelectiones,
   }) => {
+
+    const [ images, setImages ] = useState()
 
 
 
@@ -22,14 +26,27 @@ const CartItem = ({
     return newArray
   }
 
+ 
 
-  
+  const time = () => {
+    const first = setTimeout(() => {
+      setImages(miniImage.first)
+    },3000)
+    return first
+  }
+
+  useEffect(() => {
+    setImages(image)
+  }, [])
 
 
 
   return (
     <div className="cartitem">
-      <img src={image} alt="" ></img>
+      <img src={images} alt="" onMouseOver={() => {
+        time()
+      }} ></img>
+ 
       <Link to={`/produit/${id}`}>{titre}</Link>
       <p>{prix}€</p>
       <Trash id={id} onClick={() =>{ 

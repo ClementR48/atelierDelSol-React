@@ -1,17 +1,32 @@
 import { useEffect, useState } from "react";
-
+import { ThumbsUp } from "react-feather";
 
 
 
 const FicheProduit = ({ product, cartItems, produitsSelectiones}) => {
 
   const [imagesOrder, setImagesOrder] = useState([])
+  const [ buttonText, setButtonText ] = useState('')
+
+  
+
+  
+    const time = () => {
+      const timer = setTimeout(() => {
+        setButtonText('Ajouter au panier')
+      },1000 );
+  
+      return () => clearTimeout(timer);
+    }
+  
+
+  
   
 
 useEffect(() => {
   
   setImagesOrder([product.image, product.miniImage.first, product.miniImage.seconde, product.miniImage.third])
-  
+  setButtonText('Ajouter au panier')
 }, [])
 
 
@@ -49,7 +64,7 @@ useEffect(() => {
           <p>Largeur: {product.dimensions.largeur}cm</p>
         </div>
         <p className="prix">{product.prix}€</p>
-        <button onClick={() => {
+        <button onClick={ (event) => {
          let localData = JSON.parse(localStorage.getItem('data'))
             if(localData){
               
@@ -62,10 +77,13 @@ useEffect(() => {
               localData.push(product);
               localStorage.setItem('data',JSON.stringify(localData))
             }
+            setButtonText(<> <ThumbsUp  size={16}/> <ThumbsUp  size={16}/> <ThumbsUp  size={16}/> <ThumbsUp  size={16}/> </> )
+            
+            time()
             
             
             cartItems(product.id)}}
-            >{ produitsSelectiones.length > 0 ? 'Un de plus peut-etre ?' : 'Ajouter au panier' }</button>
+            >{buttonText}</button>
       </div>
 
 
