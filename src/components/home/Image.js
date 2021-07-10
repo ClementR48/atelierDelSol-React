@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 
 
 
-import  ImageMain  from "../../images/homeMainImage2.jpg";
+import  ImageMain  from "../../images/homeMainImage2Moyenne.jpg";
 
 
 const Image = () => {

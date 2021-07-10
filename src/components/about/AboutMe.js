@@ -1,7 +1,7 @@
 import gsap from 'gsap/gsap-core';
 import React, { useEffect, useRef } from 'react';
 
-import picture from '../../images/aproposMarieBis.jpg'
+import picture from '../../images/aproposMarieBisPetite.jpg'
 
 const AboutMe = () => {
 

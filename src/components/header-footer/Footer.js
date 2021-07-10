@@ -1,6 +1,6 @@
 
 
-import logo from "../../images/logo2.png"
+import logo from "../../images/logo2petit.png"
 
 const Footer = ({ color }) => {
 

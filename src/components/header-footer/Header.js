@@ -9,7 +9,7 @@ import gsap from 'gsap/gsap-core';
 import { ShoppingCart, Menu } from 'react-feather';
 
 //logo
-import logo from "../../images/logo2.png";
+import logo from "../../images/logo2petit.png";
 
 
 const Header = ({ anim, itemCount }) => {
