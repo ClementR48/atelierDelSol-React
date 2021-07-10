@@ -15,6 +15,7 @@ import Produit from './pages/Produit'
 // Utils
 import color from './utils/color'
 import produits from './utils/produits'
+import HeaderSmall from './components/header-footer/HeaderSmall'
 
 function App() {
 
@@ -48,6 +49,8 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+
+      {/* <HeaderSmall /> */}
       <Switch>
         <Route path="/" exact>
           <Home

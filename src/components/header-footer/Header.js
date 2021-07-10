@@ -50,6 +50,10 @@ const Header = ({ anim, itemCount }) => {
           <span>{itemCount}</span></NavLink>
         </div>   
 
+        <div className='ham__menu'>
+        <Menu size={36}/>
+        </div>
+
        
         
       </nav> 

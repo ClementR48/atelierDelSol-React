@@ -1,0 +1,157 @@
+
+
+.header-small {
+  width: 70%;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 150;
+  background-color: $colorCategBg;
+  transition: all 0.3s ease-out;
+  
+
+  .nav {
+    width: 100%;
+    height: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+    
+
+    
+
+    .ul {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+ 
+
+      li {
+        font-size: 1.2em;
+        position: relative;
+
+
+
+        .nav-active {
+          color: $colorBlue;
+
+          &::after {
+            content: '';
+            width: 7px;
+            height: 7px;
+            position: absolute;
+            background-color: $colorBlue;
+            border-radius: 50%;
+            top: 45%;
+            right: -20%;
+            
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: $colorHeaderFont;
+          transition: color 0.2s;
+
+          &:hover {
+            color: $colorBlue;
+          }
+
+          &:visited {
+            color: none;
+          }
+        }
+
+        &:last-child {
+          .nav-active {
+            color: $colorBlue;
+          &::after {
+            content: '';
+            width: 7px;
+            height: 7px;
+            position: absolute;
+            background-color: $colorBlue;
+            border-radius: 50%;
+            top: 45%;
+            
+          }
+        }
+      }
+      }
+
+
+
+      img {
+        width: 90px;
+      }
+    }
+
+    div {
+      
+
+      span {
+  
+ 
+        &:focus {
+          background-color: $colorFooterFont;
+        }
+      }
+
+      &:hover span {
+        color: black;
+        background-color: $colorFooterFont;
+      }
+
+      &:hover svg {
+        color: $colorBlue;
+      }
+      
+      
+
+      .nav-active svg {
+        color: $colorBlue;
+      }
+
+      .nav-active span {
+        background-color: $colorFooterFont;
+      }
+
+      .nav-active::before {
+        content: '';
+        width: 7px;
+        height: 7px;
+        position: absolute;
+        background-color: $colorBlue;
+        border-radius: 50%;
+        right: 40%;
+        top: 100%;
+        transform: translate(50%, 50%);
+      }
+
+      svg {
+        color: $colorHeaderFont;
+
+        
+
+        &:hover {
+          
+        }
+      }
+    }
+
+    .ham__menu {
+      display: none;
+      cursor: pointer;
+ }
+
+
+
+
+  }
+}

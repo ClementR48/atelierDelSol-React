@@ -1,7 +1,7 @@
 import{ Link } from "react-router-dom";
 
 import articles_home from "../../utils/articles_home";
-import picture1 from '../../images/homeImage1ter.jpg'
+
 
 
 
@@ -28,7 +28,7 @@ const HomeArticle = () => {
           <Link to="/tienda">Acceder au shop</Link>
         </div>
         <div className="picture">
-          <img src={picture1} alt="vase"></img>
+          <img src={articles_home[1].image} alt="vase"></img>
         </div>
       </div>
     </main>
