@@ -43,10 +43,12 @@ const CartItem = ({
 
   return (
     <div className="cartitem">
-      <img src={images} alt="" onMouseOver={() => {
-        time()
-      }} ></img>
- 
+      <div className='picture'>
+        <img src={images} alt="" onMouseOver={() => {
+          time()
+        }} ></img>
+      </div>
+      
       <Link to={`/produit/${id}`}>{titre}</Link>
       <p>{prix}€</p>
       <Trash id={id} onClick={() =>{ 

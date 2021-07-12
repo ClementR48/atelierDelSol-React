@@ -1,7 +1,8 @@
 .fiche-produit {
   margin: 10% 5%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  
 
   .images {
     flex: 0.5;
@@ -15,15 +16,16 @@
       width: 100%;
       img {
         width: 33%;
+        cursor: pointer;
       }
     }
   }
 
   .informations {
     background-color: rgba(255,242,188, 0.5);
-    margin-left: 5%;
+    
     flex: 0.3;
-    padding: 5%;
+    padding: 2%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -62,6 +64,7 @@
       padding: 10px;
       color: $colorText;
       font-size: 1em;
+      cursor: pointer;
 
       &:hover {
         background-color: $colorBlue;
@@ -105,6 +108,7 @@
 
 @media (max-width: 960px) {
   .fiche-produit {
+    margin: 10% 1%;
     .images {
       img {
       }
@@ -137,14 +141,15 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .fiche-produit {
     flex-direction: column;
-    margin: 5% 5%;
+    margin: 10% 5%;
 
     .images {
       display: flex;
       width: 100%;
+      
 
       img {
         width: 70%;
@@ -167,30 +172,32 @@
     }
 
     .informations {
-      width: 80%;
+      width: 100%;
       padding: 0;
+      margin-top: 2%;
+      padding-top: 5%;
 
       h2 {
         font-size: 2em;
-        padding-bottom: 2%;
+        padding-bottom: 6%;
       }
 
       .description {
         font-size: 1em;
-        padding-bottom: 2%;
+        padding-bottom:6%;
       }
 
       .dimensions {
         font-size: 1em;
-        padding-bottom: 2%;
+        padding-bottom: 6%;
       }
 
       .prix {
-        padding-bottom: 2%;
+        padding-bottom: 6%;
       }
 
       button {
-        padding-bottom: 2%;
+        
       }
     }
   }
@@ -198,7 +205,7 @@
 
 @media (max-width: 425px) {
   .fiche-produit {
-    margin: 5% 2%;
+    margin: 10% 2%;
 
     .images {
       flex-direction: column;
@@ -231,11 +238,11 @@
       }
 
       .description {
-        font-size: 0.9em;
+        font-size: 1em;
       }
 
       .dimensions {
-        font-size: 0.9em;
+        font-size: 1em;
       }
 
       .prix {

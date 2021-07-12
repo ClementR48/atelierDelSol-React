@@ -26,7 +26,7 @@ function App() {
   
   const [produitsSelectiones, setProduitsSelectiones] = useState([])
   const [itemCount, setItemCount] = useState(0)
-  const [ smallMenu , setSmallMenu ] =useState(true)
+  const [ smallMenu , setSmallMenu ] =useState(false)
 
 
  

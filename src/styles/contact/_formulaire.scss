@@ -1,6 +1,7 @@
 .formulaire {
   margin: 10% 5%;
   display: flex;
+  border: dashed 1px $colorFooterFont;
 
   .left {
     width: 50%;
@@ -112,6 +113,7 @@
       border: none;
       color: $colorText;
       font-family: $mainFont;
+      cursor: pointer;
       
     }
     button:hover {
@@ -170,6 +172,7 @@
   .formulaire {
     .left {
       img {
+        width: 50px;
       }
 
       .hello {

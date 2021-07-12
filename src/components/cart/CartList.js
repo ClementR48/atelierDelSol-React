@@ -20,7 +20,7 @@ const CartList = ({produitsSelectiones, setProduitsSelectiones, localData}) => {
 
   const affichage =() => {
     if(produitsSelectiones.length === 0) {
-      return <p> Votre panier est vide, n'hésitez a aller voir la Tienda  </p>
+      return <p className="paniervide"> Votre panier est vide, n'hésitez a aller voir <Link to='/tienda'>la Tienda </Link>  </p>
     }else {
       return(
         produitsSelectiones.map((produit, index) => {
