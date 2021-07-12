@@ -3,12 +3,12 @@ import { useEffect, useState } from 'react'
 
 
 import Categorie from '../components/tienda/Categorie'
-import Footer from '../components/header-footer/Footer'
-import Header from '../components/header-footer/Header'
-import Shop from '../components/tienda/Shop'
-import SocialNetwork from '../components/social_network/SocialNetwork'
 
-const Tienda = ({ color, itemCount, produits }) => {
+
+import Shop from '../components/tienda/Shop'
+
+
+const Tienda = ({ produits }) => {
   const [listProduit, setListProduit] = useState([])
 
   const fetchProducts = async () => {
@@ -44,15 +44,14 @@ const Tienda = ({ color, itemCount, produits }) => {
 
   return (
     <div className="tienda">
-      <SocialNetwork />
-      <Header itemCount={itemCount} />
+      
       <Categorie
         categories={categories}
         allProduits={allProduits}
         choiceList={choiceList}
       />
       <Shop listProduit={listProduit} />
-      <Footer color={color} />
+      
     </div>
   )
 }

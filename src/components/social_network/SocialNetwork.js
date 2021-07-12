@@ -1,19 +1,24 @@
 import gsap from 'gsap/gsap-core';
 import React, { useEffect, useRef } from 'react';
 import { Facebook, Mail, Instagram } from 'react-feather';
+import { useLocation } from 'react-router-dom';
 
-const SocialNetwork = ({anim}) => {
+const SocialNetwork = () => {
 
   const el = useRef(null);
+
+ let location = useLocation()
 
 
 
   useEffect(() => {
-    if (anim) {
-      gsap.from(el.current, {opacity:0,x:-100, duration:1})
-    }
     
-  }, [])
+      gsap.from(el.current, {opacity:0,x:-100, duration:1})
+    
+      
+    
+    
+  }, [location])
 
   return (
     <div className="social-network" ref={el}>

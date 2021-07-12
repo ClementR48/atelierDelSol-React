@@ -5,6 +5,9 @@ import { useEffect, useState } from 'react'
 import ScrollToTop from './components/ScrollToTop'
 
 // Components
+import HeaderSmall from './components/header-footer/HeaderSmall'
+import Header from './components/header-footer/Header'
+import Footer from './components/header-footer/Footer'
 import Home from './pages/Home'
 import Tienda from './pages/Tienda'
 import Contact from './pages/Contact'
@@ -13,17 +16,24 @@ import Cart from './pages/Cart'
 import Produit from './pages/Produit'
 
 // Utils
-import color from './utils/color'
+
 import produits from './utils/produits'
-import HeaderSmall from './components/header-footer/HeaderSmall'
+import SocialNetwork from './components/social_network/SocialNetwork'
+
 
 function App() {
 
-  const [anim] = useState(true)
+  
   const [produitsSelectiones, setProduitsSelectiones] = useState([])
   const [itemCount, setItemCount] = useState(0)
+  const [ smallMenu , setSmallMenu ] =useState(true)
+
+
+ 
+
   
   let localData = JSON.parse(localStorage.getItem('data'))
+ 
   
 
   const cartItems = (id) => {
@@ -49,39 +59,39 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <Header setSmallMenu={setSmallMenu} smallMenu={smallMenu} itemCount={itemCount} />
+      <HeaderSmall setSmallMenu={setSmallMenu}  smallMenu={smallMenu} itemCount={itemCount}/> 
+      <SocialNetwork />
+      
 
-      {/* <HeaderSmall /> */}
       <Switch>
-        <Route path="/" exact>
+        <Route path="/" exact >
           <Home
-            color={color.home}
-            itemCount={itemCount}
-            anim={anim}
+            
           />
         </Route>
          <Route path="/tienda" exact>
           <Tienda
-            color={color.tienda}
-            itemCount={itemCount}
+            
             produits={produits}
           />
         </Route>
         <Route path="/contact" exact>
           <Contact
-            color={color.contact}
-            itemCount={itemCount}
+            
+            
           />
         </Route>
          <Route path="/à-propos" exact>
           <About
-            color={color.about}
-            itemCount={itemCount}
+            
+           
           />
         </Route>
         <Route path="/panier" exact>
           <Cart
-            color={color.cart}
-            itemCount={itemCount}
+            
+            
             produitsSelectiones={produitsSelectiones}
             setProduitsSelectiones={setProduitsSelectiones}
             
@@ -89,9 +99,9 @@ function App() {
         </Route>
         <Route path="/produit/:id">
           <Produit
-            color={color.produit}
+            
             produits={produits}
-            itemCount={itemCount}
+            
             cartItems={cartItems}
             produitsSelectiones={produitsSelectiones}
             setProduitsSelectiones={setProduitsSelectiones}
@@ -99,6 +109,7 @@ function App() {
           />
         </Route>  
       </Switch>
+      <Footer />
     </BrowserRouter>
   )
 }

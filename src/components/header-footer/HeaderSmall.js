@@ -3,39 +3,45 @@ import { NavLink } from 'react-router-dom'
 import logo from '../../images/logo2petit.png'
 import { ShoppingCart, Menu } from 'react-feather'
 
-const HeaderSmall = () => {
+const HeaderSmall = ({smallMenu, setSmallMenu, itemCount}) => {
+
+  let cssClass = "header-small"
+
+  if (smallMenu === true) {
+    cssClass += " open"
+  }
   return (
-    <div className="header-small">
+    <div className={cssClass}>
       <nav className="nav">
-        <ul className="ul">
+        <ul className="ul" >
           <li>
             {' '}
             <img src={logo} alt="logo"></img>{' '}
           </li>
           <li>
-            <NavLink exact to="/" activeClassName="nav-active">
+            <NavLink exact to="/" activeClassName="nav-active"   onClick={() => setSmallMenu(false)}>
               Acceuil
             </NavLink>{' '}
           </li>
           <li>
-            <NavLink exact to="/tienda" activeClassName="nav-active">
+            <NavLink exact to="/tienda" activeClassName="nav-active"   onClick={() => setSmallMenu(false)}>
               Tienda
             </NavLink>{' '}
           </li>
           <li>
-            <NavLink exact to="/contact" activeClassName="nav-active">
+            <NavLink exact to="/contact" activeClassName="nav-active"   onClick={() => setSmallMenu(false)}>
               Contact
             </NavLink>{' '}
           </li>
           <li>
-            <NavLink exact to="/à-propos" activeClassName="nav-active">
+            <NavLink exact to="/à-propos" activeClassName="nav-active"   onClick={() => setSmallMenu(false)}>
               About
             </NavLink>{' '}
           </li>
           <li>
-          <NavLink exact to="/panier" activeClassName="nav-active">
+          <NavLink exact to="/panier" activeClassName="nav-active"   onClick={() => setSmallMenu(false)}>
             <ShoppingCart className="cart" size={22} />
-            <span></span>
+            <span>{itemCount}</span>
           </NavLink>
           </li>
         </ul>

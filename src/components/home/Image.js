@@ -18,6 +18,15 @@ const Image = () => {
 
 
    useEffect(() => {
+ /*    let y = -90;
+    let d = 1
+    textImageSplit.forEach((item, index) => {
+      y = y-10
+      d = d+0.05
+      gsap.to(els.current[index], {y:y , duration:0.6, delay: d, opacity:1,ease:'power4' })
+      ;
+    }) */
+
     const timeLine = gsap.timeline({delay:0});
     timeLine.from(image.current, {y:400, duration: 1, opacity:0})
     
@@ -41,10 +50,10 @@ const Image = () => {
     gsap.to(els.current[17], {y:-120 , duration:0.6,delay: 1.85, opacity:1,ease: "power4" })
     gsap.to(els.current[18], {y:-110 , duration:0.6,delay: 1.90, opacity:1,ease: "power4" })
     gsap.to(els.current[19], {y:-100 , duration:0.6,delay: 1.95, opacity:1,ease: "power4" })
-    gsap.to(els.current[20], {y:-90 , duration:0.6,delay: 2, opacity:1,ease: "power4" })
+    gsap.to(els.current[20], {y:-90 , duration:0.6,delay: 2, opacity:1,ease: "power4" })  
 
 
-    
+
     
     
   
@@ -56,6 +65,7 @@ const Image = () => {
       <div className="text">
         {textImageSplit.map((letter, index) => 
            <li ref={(element) => els.current[index] = element}  key={index}>{letter}</li>
+
         
         )}
       </div>

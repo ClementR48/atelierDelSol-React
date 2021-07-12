@@ -1,15 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
 
-import Footer from '../components/header-footer/Footer';
-import Header from '../components/header-footer/Header';
+
 import FicheProduit from '../components/produit/FicheProduit';
-import SocialNetwork from '../components/social_network/SocialNetwork';
+
 
 const Produit = ({
-          color,
+          
           produits,
-          itemCount,
           setItemCount,
           cartItems,
           produitsSelectiones,
@@ -43,7 +41,7 @@ const Produit = ({
 
   return (
     <div className="produit-page">
-      <Header itemCount={itemCount} />
+      
       {product && <FicheProduit
         product={product}
         cartItems={cartItems}
@@ -53,8 +51,8 @@ const Produit = ({
         localData={localData}
         
        />}
-      <SocialNetwork />
-      <Footer color={color}/>
+      
+     
     </div>
   );
 };

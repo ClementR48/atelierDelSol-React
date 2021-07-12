@@ -1,6 +1,6 @@
 
-import React, { useEffect, useRef } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect, useRef} from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 
 //Animation GSAP
 import gsap from 'gsap/gsap-core';
@@ -12,28 +12,37 @@ import { ShoppingCart, Menu } from 'react-feather';
 import logo from "../../images/logo2petit.png";
 
 
-const Header = ({ anim, itemCount }) => {
+const Header = ({ itemCount, setSmallMenu, smallMenu }) => {
   const ul = useRef(null) ;
   const image = useRef(null) ;
   const cart = useRef(null) ;
 
   
-
+ 
+  
+  
+  let location = useLocation()
 
   const gsapAnim = () => {
-    if(anim === true){
+    
       gsap.from(ul.current, {x:500, duration: 1, opacity:0, })
       gsap.from(image.current, {x:-200 , duration:1, opacity:0, delay:1})
-      gsap.from(cart.current, {y:100 , duration:1, opacity:0, })
+      gsap.from(cart.current, {y:100 , duration:1, opacity:0 })
     }
-  }
+  
 
 
 
   useEffect(() => {
-    gsapAnim()
+    if(location.pathname === '/'){
+      gsapAnim()
+    }
+      
+    
+    
+    
 
-  },[])
+  }, [location])
     
   return (
     <header className="header">
@@ -51,7 +60,7 @@ const Header = ({ anim, itemCount }) => {
         </div>   
 
         <div className='ham__menu'>
-        <Menu size={36}/>
+        <Menu size={36} onClick={() => setSmallMenu(!smallMenu) }/>
         </div>
 
        

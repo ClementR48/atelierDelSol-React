@@ -1,11 +1,21 @@
-
+import color from '../../utils/color'
 
 import logo from "../../images/logo2petit.png"
+import { useLocation } from 'react-router-dom';
 
-const Footer = ({ color }) => {
+const Footer = () => {
+
+  let location = useLocation()
+  let style = ''
+
+  if(location.pathname.startsWith('/produit/')){
+    style = {backgroundColor: color[/produit/]}
+  }else {
+    style = {backgroundColor : color[location.pathname]}
+  }
 
   return (
-    <footer style={{backgroundColor: color}} className="footer">
+    <footer style={style} className="footer">
       <img src={logo} alt="logo"></img>
       <ul className="listSocialNetwork">
         <li><span>Email:</span> atelierDelSol@gmail.com</li>
