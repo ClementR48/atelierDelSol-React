@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-
+import axios from 'axios'
 
 
 import Categorie from '../components/tienda/Categorie'
@@ -8,14 +8,14 @@ import Categorie from '../components/tienda/Categorie'
 import Shop from '../components/tienda/Shop'
 
 
-const Tienda = ({ produits }) => {
+const Tienda = ({ produits, setProduits }) => {
+
+ 
+
   const [listProduit, setListProduit] = useState([])
 
-  const fetchProducts = async () => {
-    const products = await produits
-    setListProduit(products)
-  }
 
+  console.log(listProduit);
 
   // recuperation des catégories
   const allCategoriesAvecDoublon = produits.map((produit) => produit.categorie)
@@ -38,8 +38,16 @@ const Tienda = ({ produits }) => {
   }
 
   useEffect(() => {
-    fetchProducts()
-    setListProduit(produits)
+    
+    const loadData =  async () => {
+      const result = await axios('http://localhost:5500/products')
+      setProduits(result.data)
+      setListProduit(result.data)
+    }
+    loadData()
+    
+    
+    
   }, [])
 
   return (

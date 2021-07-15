@@ -19,12 +19,12 @@ const Produit = ({
   
     //recuperation de l'id dans l'URL 
     const { id } = useParams();
-    let idNumber = parseInt(id);
+    let idNumber = id;
   
     const error = useHistory()
     
     
-    const produit = produits.find(item => item.id === idNumber)
+    const produit = produits.find(item => item._id === idNumber)
     
     
     

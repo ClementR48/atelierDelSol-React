@@ -4,11 +4,12 @@ import { Link } from 'react-router-dom'
 import Produit from './Produit'
 
 const Shop = ({ listProduit }) => {
+  
   return (
     <div className="shop">
       <div className="galerie">
         {listProduit.map((produit) => (
-          <Link key={produit.id} to={`/produit/${produit.id}`}>
+          <Link key={produit._id} to={`/produit/${produit._id}`}>
             <Produit {...produit} />
           </Link>
         ))}

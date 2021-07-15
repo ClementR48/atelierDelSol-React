@@ -5,7 +5,6 @@ import CartList from '../components/cart/CartList'
 
 const Cart = ({
         
-       
         produitsSelectiones,
         setProduitsSelectiones,
         localData

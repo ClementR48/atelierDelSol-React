@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 const CartItem = ({
-        id,
+        _id,
         titre,
         prix,
         image,
@@ -49,9 +49,9 @@ const CartItem = ({
         }} ></img>
       </div>
       
-      <Link to={`/produit/${id}`}>{titre}</Link>
+      <Link to={`/produit/${_id}`}>{titre}</Link>
       <p>{prix}€</p>
-      <Trash id={id} onClick={() =>{ 
+      <Trash id={_id} onClick={() =>{ 
         
         filteredProduit(index)} }/>
     </div>

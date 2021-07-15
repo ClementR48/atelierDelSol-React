@@ -6,6 +6,7 @@ import ScrollToTop from './components/ScrollToTop'
 
 // Components
 import HeaderSmall from './components/header-footer/HeaderSmall'
+import SocialNetwork from './components/social_network/SocialNetwork'
 import Header from './components/header-footer/Header'
 import Footer from './components/header-footer/Footer'
 import Home from './pages/Home'
@@ -17,8 +18,9 @@ import Produit from './pages/Produit'
 
 // Utils
 
-import produits from './utils/produits'
-import SocialNetwork from './components/social_network/SocialNetwork'
+
+
+
 
 
 function App() {
@@ -27,17 +29,19 @@ function App() {
   const [produitsSelectiones, setProduitsSelectiones] = useState([])
   const [itemCount, setItemCount] = useState(0)
   const [ smallMenu , setSmallMenu ] =useState(false)
-
-
- 
+  const [ produits, setProduits] =useState([]) 
 
   
+
+
   let localData = JSON.parse(localStorage.getItem('data'))
  
   
 
+
+
   const cartItems = (id) => {
-    const produit = produits.find((produit) => produit.id === id)
+    const produit = produits.find((produit) => produit._id === id)
 
     const array2 = [...produitsSelectiones, produit]
     setProduitsSelectiones(array2)
@@ -47,8 +51,8 @@ function App() {
     if (localData) {
       setProduitsSelectiones(localData)
     }
-  }, [])
 
+  }, [])
 
 
   useEffect(() => {
@@ -74,6 +78,7 @@ function App() {
           <Tienda
             
             produits={produits}
+            setProduits={setProduits}
           />
         </Route>
         <Route path="/contact" exact>

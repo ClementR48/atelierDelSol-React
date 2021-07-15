@@ -64,7 +64,7 @@ useEffect(() => {
           <p>Largeur: {product.dimensions.largeur}cm</p>
         </div>
         <p className="prix">{product.prix}€</p>
-        <button onClick={ (event) => {
+        <button onClick={ () => {
          let localData = JSON.parse(localStorage.getItem('data'))
             if(localData){
               
@@ -82,7 +82,7 @@ useEffect(() => {
             time()
             
             
-            cartItems(product.id)}}
+            cartItems(product._id)}}
             >{buttonText}</button>
       </div>
 

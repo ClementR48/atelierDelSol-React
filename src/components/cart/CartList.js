@@ -4,9 +4,9 @@ import CartItem from './CartItem';
 import { ArrowLeft } from 'react-feather';
 
 
-const CartList = ({produitsSelectiones, setProduitsSelectiones, localData}) => {
+const CartList = ({produitsSelectiones, setProduitsSelectiones}) => {
 
-  
+  console.log(produitsSelectiones);
   const [sum, setSum] = useState()
   const reducer = (accumulator, currentValue) => accumulator + currentValue
   const prix = []
