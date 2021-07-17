@@ -15,8 +15,7 @@ const Tienda = ({ produits, setProduits }) => {
   const [listProduit, setListProduit] = useState([])
 
 
-  console.log(listProduit);
-
+  
   // recuperation des catégories
   const allCategoriesAvecDoublon = produits.map((produit) => produit.categorie)
 

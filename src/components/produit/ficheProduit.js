@@ -3,7 +3,7 @@ import { ThumbsUp } from "react-feather";
 
 
 
-const FicheProduit = ({ product, cartItems, produitsSelectiones}) => {
+const FicheProduit = ({ product, cartItems}) => {
 
   const [imagesOrder, setImagesOrder] = useState([])
   const [ buttonText, setButtonText ] = useState('')

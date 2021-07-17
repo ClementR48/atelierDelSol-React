@@ -19,7 +19,7 @@ const Categorie = ({ categories, allProduits, choiceList }) => {
   return (
     <div className="categorie">
       <ul className="ul" ref={categs}>
-        {categories.map((categorie) => (
+        {categories.map((categorie, index) => (
           <li
             onClick={(event) => {
               choiceList(categorie)
@@ -27,7 +27,7 @@ const Categorie = ({ categories, allProduits, choiceList }) => {
               gsap.from(event.target, {duration: 0.5, y:-50, opacity:0, ease:'back'})
               
             }}
-            key={categorie}
+            key={index}
             className={selected === categorie ? 'categ selected' : 'categ'} 
           >
             {categorie}

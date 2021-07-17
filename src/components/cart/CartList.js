@@ -6,10 +6,11 @@ import { ArrowLeft } from 'react-feather';
 
 const CartList = ({produitsSelectiones, setProduitsSelectiones}) => {
 
-  console.log(produitsSelectiones);
   const [sum, setSum] = useState()
   const reducer = (accumulator, currentValue) => accumulator + currentValue
   const prix = []
+
+  
   
   let directionLien = ''
   if(produitsSelectiones.length === 0) {
@@ -38,6 +39,7 @@ const CartList = ({produitsSelectiones, setProduitsSelectiones}) => {
 
   useEffect(() => {
     setSum(prix.reduce(reducer, 0))
+    console.log(prix);
   }, [produitsSelectiones])
 
   
