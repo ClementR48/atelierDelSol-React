@@ -5,6 +5,7 @@ import Introduction from '../components/contact/Introduction';
 import Formulaire from '../components/contact/Formulaire';
 
 const Contact = () => {
+  
   return (
     <div className="contact-page">
       
