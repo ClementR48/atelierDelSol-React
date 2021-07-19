@@ -1,7 +1,6 @@
 .formulaire {
   margin: 10% 5%;
   display: flex;
-  border: dashed 1px $colorFooterFont;
 
   .left {
     width: 50%;
@@ -53,8 +52,14 @@
           padding-right: 20px;
         }
         svg {
-          width: 20px;
-          height: 20px;
+          width: 21px;
+          height: 21px;
+
+          &:hover {
+            color: white;
+            fill: $colorBlue;
+          
+          }
         }
       }
     }
@@ -68,10 +73,11 @@
     padding: 3%;
 
     input {
+      padding: 10px;
       border: none;
       outline: none;
       background-color: $colorForm;
-      color: $colorHeaderFont;
+      color: black;
       padding-bottom: 1%;
       margin-bottom: 5%;
       border-bottom: 1px $colorHeaderFont solid;
@@ -81,31 +87,46 @@
       &::placeholder {
         color: $colorHeaderFont;
       }
+
+      &:focus::placeholder {
+        font-weight: bold;
+      }
+      &:focus {
+        font-size: 1.2em;
+        
+      }
     }
 
     textarea {
       border: none;
       outline: none;
       background-color: $colorForm;
-      color: $colorHeaderFont;
-      padding-bottom: 25%;
+      color: black;
+      padding: 10px 10px 15% 10px;
       margin-bottom: 15%;
       border-bottom: 1px $colorHeaderFont solid;
       font-size: $mainFontSize;
       font-family: $mainFont;
       resize: none;
+      
+      
 
       &::placeholder {
         color: $colorHeaderFont;
+        
+      }
+      &:focus::placeholder {
+        font-weight: bold;
+      }
+      &:focus {
+        font-size: 1.2em;
+        color: black;
       }
     }
 
     button {
-      position: absolute;
-      border-radius: 20px;
-      bottom: 3%;
-      right: 3%;
       text-align: right;
+      border-radius: 20px;
       font-size: 1.1em;
       width: fit-content;
       padding: 10px 25px;
@@ -118,6 +139,16 @@
     }
     button:hover {
       background-color: $colorBlue;
+    }
+
+    .form-message {
+      transition: all 0.5s;
+      font-style: italic;
+      margin-top: 10px;
+      padding: 10px;
+      text-align: center;
+      border-radius: 20px;
+      opacity: 0;
     }
   }
 }

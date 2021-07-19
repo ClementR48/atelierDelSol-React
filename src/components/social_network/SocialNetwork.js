@@ -23,9 +23,9 @@ const SocialNetwork = () => {
   return (
     <div className="social-network" ref={el}>
       <div>
-        <a href="https://www.facebook.com/"><Facebook /></a>
-        <a href="https://mail.google.com/"><Mail /></a>
-        <a href="https://instagram.com/"><Instagram /></a>
+        <a  href="https://www.facebook.com/"><Facebook className="facebook" /></a>
+        <a  href="https://mail.google.com/"><Mail className="gmail" /></a>
+        <a  href="https://instagram.com/"><Instagram className="instagram"/></a>
       </div>
     </div>
   );
