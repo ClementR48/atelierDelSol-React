@@ -26,17 +26,17 @@ export default [
     titre: 'Murielle Bolle ',
     description: 'Vase modelé à la main avec la technique du colombin. Faïence blanche texturée Email transparent et turquoise',
     image: 'http://image.noelshack.com/fichiers/2021/27/6/1625911037-produit3-4bis.jpg',
-    miniImage : {
+    
       first: 'http://image.noelshack.com/fichiers/2021/27/6/1625911036-produit3-1.jpg',
       seconde: 'http://image.noelshack.com/fichiers/2021/27/6/1625911038-produit3-2bis.jpg',
-      third :'http://image.noelshack.com/fichiers/2021/27/6/1625911038-produit3-3bis.jpg'
-    },
+      third :'http://image.noelshack.com/fichiers/2021/27/6/1625911038-produit3-3bis.jpg',
+    
     categorie: 'Bol',
-    dimensions: 
-    {
+    
+    
       hauteur: '40',
-      largeur: '30'
-    },
+      largeur: '30',
+    
     prix: 25,
     quantité: 1,
     epuise: false

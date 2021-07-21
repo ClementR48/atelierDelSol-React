@@ -25,7 +25,7 @@ const FicheProduit = ({ product, cartItems}) => {
 
 useEffect(() => {
   
-  setImagesOrder([product.image, product.miniImage.first, product.miniImage.seconde, product.miniImage.third])
+  setImagesOrder([product.image, product.first, product.seconde, product.third])
   setButtonText('Ajouter au panier')
 }, [])
 
@@ -60,8 +60,8 @@ useEffect(() => {
         {product.description}
         </p>
         <div className="dimensions">
-          <p>Hauteur: {product.dimensions.hauteur}cm</p> 
-          <p>Largeur: {product.dimensions.largeur}cm</p>
+          <p>Hauteur: {product.hauteur}cm</p> 
+          <p>Largeur: {product.largeur}cm</p>
         </div>
         <p className="prix">{product.prix}€</p>
         <button onClick={ () => {

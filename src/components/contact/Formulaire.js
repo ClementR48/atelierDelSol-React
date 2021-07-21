@@ -1,7 +1,7 @@
 import gsap from 'gsap/gsap-core'
 import { useEffect, useRef, useState } from 'react'
 import { Instagram, Facebook, Mail } from 'react-feather'
-import logo from '../../images/logo2.png'
+import logo from '../../images/logo2petit.png'
 import emailjs from 'emailjs-com'
 
 const Formulaire = () => {
@@ -9,7 +9,7 @@ const Formulaire = () => {
   const [objet, setObjet] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
-  const [affichageButton, setAffichageButton] = useState('Envoyer')
+  
 
   const hello = useRef(null)
   const contact = useRef(null)
@@ -44,8 +44,8 @@ const Formulaire = () => {
   const successMessage = () => {
     let formMessageElement = document.querySelector(".form-message");
 
-    formMessageElement.innerHTML= 'Message envoyé, nous vons recontacterons :)'
-    formMessageElement.style.background = "#00c1ec"
+    formMessageElement.innerHTML= 'Message envoyé, nous vons recontacterons au plus vite :)'
+    formMessageElement.style.background = "rgb(8,43,177)"
     formMessageElement.style.opacity = '1';
   }
 
@@ -150,7 +150,7 @@ const Formulaire = () => {
             setMessage(event.target.value)
           }}
         ></textarea>
-        <button type="submit">{affichageButton}</button>
+        <button type="submit">Envoyer</button>
         <div className="form-message"></div>
       </form>
     </div>
