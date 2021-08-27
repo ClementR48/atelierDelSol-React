@@ -44,9 +44,7 @@ const CartItem = ({
   return (
     <div className="cartitem">
       <div className='picture'>
-        <img src={images} alt="" onMouseOver={() => {
-          time()
-        }} ></img>
+        <img src={images} alt="" ></img>
       </div>
       
       <Link to={`/produit/${_id}`}>{titre}</Link>

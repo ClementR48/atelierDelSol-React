@@ -13,6 +13,7 @@
       overflow: hidden;
       position: relative;
       cursor: pointer;
+      border-radius: 5px;
 
       img {
         width: 100%;
@@ -21,18 +22,18 @@
       }
 
       &:hover img {
-        transform: scale(1.025);
+        transform: scale(1.05);
       }
 
       .caption {
         position: absolute;
         display: flex;
         align-items: center;
-        top: 0;
+        bottom: 0;
         left: 0;
         width: 100%;
         height: 20%;
-        background: rgba(0, 0, 0, 0.3);
+        background: white;
         transform: scale(1.2);
         opacity: 0;
         transition: 0.5s;
@@ -40,24 +41,23 @@
         .about {
           width: 100%;
           height: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          align-items: center;
-          text-align: center;
+          padding: 10px;
+          margin-top: 10px;
+          
           
 
           h3 {
             
             font-size: 1.5em;
-            color: $colorBlue;
+            color: rgba(134, 90, 71, 1);
             font-weight: bold;
+            margin-bottom: 10px;
             
           }
 
           p {
             font-style: italic;
-            color: white;
+            color: rgba(134, 90, 71, 1);
             font-size: 1.2em;
             
           }
@@ -124,7 +124,7 @@
         }
 
         .caption {
-          background: none;
+          background: white;
           position: relative;
           display: flex;
           justify-content: center;
@@ -132,9 +132,7 @@
           height: 60px;
           opacity: 1;
           transform: scale(1);
-          border-bottom: 2px dashed $colorFooterFont;
-          border-left: 2px dashed $colorFooterFont;
-          border-right: 2px dashed $colorFooterFont;
+
 
           .about {
             display: block;
@@ -143,6 +141,50 @@
 
             h3 {
               font-size: 1.5em;
+              
+              
+            }
+
+            p {
+              font-size: 1em;
+             
+              
+            }
+          }
+        }
+
+        &:hover .caption {
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .shop {
+    margin: 15% 2%;
+    .galerie {
+      gap: 10px;
+      .produit {
+        width: 100%;
+        img {
+        }
+
+        &:hover img {
+
+        }
+
+        .caption {
+  
+
+
+          .about {
+            display: block;
+            
+            
+
+            h3 {
+              font-size: 1em;
               
               
             }
@@ -162,24 +204,6 @@
   }
 }
 
-@media (max-width: 700px) {
-  .shop {
-    margin: 15% 2%;
-    .galerie {
-      gap: 10px;
-
-      .produit {
-        width: 100%;
-
-        img {
-        }
-
-        &:hover img {
-        }
-      }
-    }
-  }
-}
 
 @media (max-width: 500px) {
   .shop {

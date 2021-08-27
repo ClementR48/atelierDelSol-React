@@ -46,36 +46,7 @@
       }
     }
 
-    &:hover .facebook {
-      border-radius: 50%;
-      padding: 5px;
-      background-color: rgb(25,119,243);
-      fill: white;
-      stroke: transparent;
-      transition: 0.5s all;
-      
-    }
-    &:hover .instagram {
-      border-radius: 50%;
-      padding: 5px;
-      background-color: white;
-      fill: rgb(223,67,48);
-      fill: 2px;
-      stroke: white;
-      transition:all 0.5s ;
-      
-    }
-
-    &:hover .gmail {
-      border-radius: 50%;
-      padding: 5px;
-      background-color: grey;
-      fill: rgb(239,239,239);
-      fill: 2px;
-      stroke: rgb(220,66,52);
-      transition:all 0.5s ;
-      
-    }
+    
   }
 
 

@@ -82,20 +82,22 @@
   }
 
   .retour {
+   
     padding: 2%;
     margin-left: 50px;
     text-decoration: none;
     color: $colorBlue;
     transition: all 0.2s;
     display: flex;
-    width: fit-content;
+    font-size: 23px;
     align-items: center;
     
     
 
     & > svg {
-      padding-right: 5%;
+      padding-right: 10px;
       transition: all 0.2s;
+      width: 25px;
     }
 
     &:hover svg {

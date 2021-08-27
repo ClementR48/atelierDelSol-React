@@ -21,7 +21,14 @@ const CartList = ({produitsSelectiones, setProduitsSelectiones}) => {
 
   const affichage =() => {
     if(produitsSelectiones.length === 0) {
-      return <p className="paniervide"> Votre panier est vide, n'hésitez a aller voir <Link to='/tienda'>la Tienda </Link>  </p>
+      return (
+        <>
+          <p className="paniervide"> Votre panier est vide, n'hésitez pas à aller voir <Link to='/tienda'>la Tienda </Link>  </p>
+          <div className="carousel">
+            
+          </div>
+       </>
+      ) 
     }else {
       return(
         produitsSelectiones.map((produit, index) => {
@@ -48,7 +55,7 @@ const CartList = ({produitsSelectiones, setProduitsSelectiones}) => {
       <h2>Mon panier</h2>
       <div className="listandtotal">
         <div className="list">
-
+          
           {affichage()}
           
         </div>

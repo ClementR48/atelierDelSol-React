@@ -1,7 +1,7 @@
 .fiche-produit {
   margin: 10% 5%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   
 
   .images {
@@ -14,60 +14,67 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
+      margin-top: 30px;
       img {
-        width: 33%;
+        width: 30%;
         cursor: pointer;
       }
     }
   }
 
   .informations {
-    background-color: rgba(255,242,188, 0.5);
+    
     
     flex: 0.3;
     padding: 2%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  
+    height: fit-content;
   
     
     
     h2 {
       font-size: 3em;
-      text-align: center;
+      margin-bottom: 60px;
+     
     }
 
     .description {
       color: $colorText;
-      text-align: center;
+      margin-bottom: 60px;
       font-size: 1.2em;
       font-style: italic;
     }
 
     .dimensions {
       color: $colorText;
-      text-align: center;
+      margin-bottom: 60px;
       font-size: 1.2em;
     }
 
     .prix {
       color: $colorText;
       font-size: 1.4em;
-      text-align: center;
+      margin-bottom: 60px;
       font-weight: bold;
     }
 
     button {
-      border: none;
-      background-color: $colorFooterFont;
-      border-radius: 20px;
-      padding: 10px;
-      color: $colorText;
-      font-size: 1em;
+      border-radius: 10% 30% 50% 70%;
+      padding: 20px;
+      background-color: $colorBlue;
+      color: $colorFooterFont;
+      text-decoration: none;
+      animation: back 15s infinite alternate;
+      transition: all 0.4s;
       cursor: pointer;
+      border: none;
+      font-size: 20px;
 
       &:hover {
-        background-color: $colorBlue;
+        border-radius: 75% 50% 30% 10%;
+        background-color: $colorFooterFont;
+        color: white;
+        transition: all 0.4s;
       }
     }
   }
@@ -106,7 +113,7 @@
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1066px) {
   .fiche-produit {
     margin: 10% 1%;
     .images {
@@ -141,7 +148,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 909px) {
   .fiche-produit {
     flex-direction: column;
     margin: 10% 5%;
@@ -172,7 +179,7 @@
     }
 
     .informations {
-      width: 100%;
+      width: 80%;
       padding: 0;
       margin-top: 2%;
       padding-top: 5%;
@@ -180,20 +187,24 @@
       h2 {
         font-size: 2em;
         padding-bottom: 6%;
+        margin-bottom: 0;
       }
 
       .description {
         font-size: 1em;
         padding-bottom:6%;
+        margin-bottom: 0;
       }
 
       .dimensions {
         font-size: 1em;
         padding-bottom: 6%;
+        margin-bottom: 0;
       }
 
       .prix {
         padding-bottom: 6%;
+        margin-bottom: 0;
       }
 
       button {
